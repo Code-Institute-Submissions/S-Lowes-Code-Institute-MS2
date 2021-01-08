@@ -1,5 +1,8 @@
 <h1 align="center">MS2</h1>
 
+- http://jservice.io/
+- https://www.npmjs.com/package/string-similarity#comparetwostringsstring1-string2
+
 This is a website for a random trivia quiz using the jService api. Designed to be eye-catching, responsive & accessible on different devices.
 
 ## User Experience
