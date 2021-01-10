@@ -13,12 +13,13 @@
     <section>
         <button id="btnNext">Next Question</button> 
         <div id="question"></div>
+        <div id="answer"></div>
         <form action="/assets/js/checkanswer.js"> <!--JS can handle the form, so we don't need to use PHP & page won't refresh-->
             <label for="userAnswer">Write Your answer Here: </label>
             <input type="text" id="userAnswer" name="userAnswer">
             <input type="button" value="Submit" onclick="checkAnswer();" >
         </form>
-        <div id="answer"></div>
+        <div class="percentClose"></div>
     </section>
     <footer>
     </footer>

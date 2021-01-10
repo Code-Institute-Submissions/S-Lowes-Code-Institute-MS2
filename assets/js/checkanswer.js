@@ -1,7 +1,7 @@
 function checkAnswer() {
+    console.log("hello"); //checking that function is called
     // send `submit` request to server
-    // document.getElementById("userAnswer").value = userAnswer;
-    // document.getElementById("answer").innerHTML = realAnswer;
-    // console.log(stringSimilarity.compareTwoStrings(userAnswer,realAnswer));
-    console.log("hello");
+    console.log(document.getElementById("answer").innerHTML);
+    console.log(document.getElementById("userAnswer").value);
+    console.log(stringSimilarity.compareTwoStrings(document.getElementById("answer").innerHTML, document.getElementById("userAnswer").value));
 }
