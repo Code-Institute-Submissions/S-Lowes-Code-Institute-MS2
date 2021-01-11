@@ -14,7 +14,7 @@
         <button id="btnNext">Next Question</button> 
         <div id="question"></div>
         <div id="answer"></div>
-        <form action="/assets/js/checkanswer.js"> <!--JS can handle the form, so we don't need to use PHP & page won't refresh-->
+        <form action="/assets/js/quiz.js"> <!--JS can handle the form, so we don't need to use PHP & page won't refresh-->
             <label for="userAnswer">Write Your answer Here: </label>
             <input type="text" id="userAnswer" name="userAnswer">
             <input type="button" value="Submit" onclick="checkAnswer();" >
@@ -25,7 +25,6 @@
     </footer>
     <!--Scripts-->
     <script src="/assets/js/quiz.js"></script>
-    <script src="/assets/js/checkanswer.js"></script>
     <script src="//unpkg.com/string-similarity/umd/string-similarity.min.js"></script> <!--https://www.npmjs.com/package/string-similarity#comparetwostringsstring1-string2-->
     <!--<script>console.log(stringSimilarity.compareTwoStrings('what!', 'who?'));</script>-->
 </body>
