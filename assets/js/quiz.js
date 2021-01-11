@@ -1,3 +1,5 @@
+let score = 0;
+
 const btnNext = document.getElementById("btnNext");
 
 btnNext.addEventListener('click', function(){ //Fetch taken from "https://developers.google.com/web/updates/2015/03/introduction-to-fetch"
@@ -31,5 +33,10 @@ function checkAnswer() {
     console.log(document.getElementById("answer").innerHTML);
     console.log(document.getElementById("userAnswer").value);
     console.log(stringSimilarity.compareTwoStrings(document.getElementById("answer").innerHTML, document.getElementById("userAnswer").value));
+    // ^ check that we are getting the correct values.
+    if (stringSimilarity.compareTwoStrings(document.getElementById("answer").innerHTML, document.getElementById("userAnswer").value)>=0.6){
+        score++
+    }
+    console.log(score)
     document.getElementById("userAnswer").value="";
 }

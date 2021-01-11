@@ -1,3 +1,14 @@
 #answer{
     display: none; /* hidden is for visibility, we want display none: To hide the current answer*/
 }
+
+.triviaHost {
+    background: url("../images/quizHost/alien_question1.png");
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+}

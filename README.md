@@ -116,7 +116,7 @@ The project was deployed to GitHub Pages using the following steps:
 
 The space to share any resources I have used to help me build this project.
 
-Image by <a href="https://pixabay.com/users/andremsantana-61090/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4824406">André Santana</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4824406">Pixabay</a>
+1. [Pixabay](https://pixabay.com/) Used for quiz host images.
 
 1. [Bootstrap4.5.2](https://getbootstrap.com/): Bootstrap Library used throughout the project.
 
