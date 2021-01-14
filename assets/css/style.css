@@ -1,6 +1,4 @@
-#answer{
-    display: none; /* hidden is for visibility, we want display none: To hide the current answer*/
-}
+/*display: none; /* hidden is for visibility, we want display none: To hide the current answer*/
 
 .triviaHost {
     background: url("../images/quizHost/alien_question1.png");

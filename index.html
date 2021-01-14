@@ -18,6 +18,7 @@
                 <h2>Welcome to Quiz</h2>
             </div>
         </div>
+        <!-- Choose a Category -->
         <div class="categoryChoice">
             <button id="catA">Animals</button> <!-- 21: http://jservice.io/api/category?id=21 -->
             <button id="catB">History</button> <!-- 114: http://jservice.io/api/category?id=114 -->
@@ -26,15 +27,14 @@
             <button id="catE">Sports</button> <!-- 42: http://jservice.io/api/category?id=42 -->
             <button id="catF">Hodgepodge</button> <!-- 227: http://jservice.io/api/category?id=227 -->
         </div>
-        <button id="btnNext">Next Question</button> 
-        <div id="question"></div>
-        <div id="answer"></div>
-        <form action="/assets/js/quiz.js"> <!--JS can handle the form, so we don't need to use PHP & page won't refresh-->
-            <label for="userAnswer">Write Your answer Here: </label>
-            <input type="text" id="userAnswer" name="userAnswer">
-            <input type="button" value="Submit" onclick="checkAnswer();" >
-        </form>
-        <div class="percentClose"></div>
+        <!-- User Answer Submission -->
+        <div class="userAnswerSubmission">
+            <form action="/assets/js/quiz.js"> <!--JS can handle the form, so we don't need to use PHP & page won't refresh-->
+                <label for="userAnswer">Write Your answer Here: </label>
+                <input type="text" id="userAnswer" name="userAnswer">
+                <input type="button" value="Submit" onclick="checkAnswer();" >
+            </form>
+        </div>
     </section>
     <footer>
     </footer>
