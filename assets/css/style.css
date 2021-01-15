@@ -1,3 +1,7 @@
+#answer { 
+    display: none;
+}
+
 /*display: none; /* hidden is for visibility, we want display none: To hide the current answer*/
 
 .triviaHost {

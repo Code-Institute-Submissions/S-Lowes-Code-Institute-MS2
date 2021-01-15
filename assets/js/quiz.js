@@ -1,11 +1,17 @@
-let score = 0; //Create variable which we will use to track the score
+// quiz.js
+// Create variables
+
+let score = 0;
 let cat = 0;
+let categoryData=0;
+
 const catA = document.getElementById("catA");
 const catB = document.getElementById("catB");
 const catC = document.getElementById("catC");
 const catD = document.getElementById("catD");
 const CatE = document.getElementById("catE");
 const catF = document.getElementById("catF");
+const startQuiz = document.getElementById("startQuiz");
 
 // Choose a Category - Grab Category from jService
 
@@ -14,7 +20,7 @@ function category(a,b) { //Fetch taken from "https://developers.google.com/web/u
     cat=b;
     console.log(cat);
 
-    var c = cat.toString();
+    var c = cat.toString(); //We use this with the jService address to access that particular category.
 
     fetch('https://jservice.io/api/category?id='+c) //Accessing the jService API - https worked, http didn't
     .then(
@@ -28,6 +34,7 @@ function category(a,b) { //Fetch taken from "https://developers.google.com/web/u
       // Examine the text in the response
       response.json().then(function(data) {
         console.log(data)
+        categoryData=data;
       });
     }
   )
@@ -36,7 +43,7 @@ function category(a,b) { //Fetch taken from "https://developers.google.com/web/u
   });
 }
 
-//Event listener for category choice
+// Event listener for category choice
 
 catA.addEventListener('click', () => category("CatA",21));
 catB.addEventListener('click', () => category("CatB",114));
@@ -45,7 +52,16 @@ catD.addEventListener('click', () => category("CatD",25));
 catE.addEventListener('click', () => category("CatE",42));
 catF.addEventListener('click', () => category("CatF",227));
 
-//Checking the Answer
+//Finding a Question
+
+startQuiz.addEventListener('click', function(){
+    const question = categoryData.clues[1].question;
+    const answer = categoryData.clues[1].answer;
+    document.getElementById("question").innerHTML = question;
+    document.getElementById("answer").innerHTML = answer;
+});
+
+// Checking the Answer
 
 function checkAnswer() {
     // send `submit` request to server
