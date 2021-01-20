@@ -14,3 +14,9 @@
     height: 200px;
     width: 200px;
 }
+
+/*--------POPUP MODAL--------*/
+
+.popUp {
+    visibility: hidden;  
+}

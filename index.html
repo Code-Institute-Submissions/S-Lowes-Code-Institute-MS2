@@ -14,8 +14,8 @@
     </header>
     <section>
         <div class="triviaHost">
-            <div class="hostSpeach">
-                <h2>Welcome to Quiz</h2>
+            <div class="hostSpeech">
+                <h2 id="hostSpeech">Welcome to Quiz</h2>
             </div>
         </div>
         <!-- Choose a Category -->
@@ -33,11 +33,16 @@
         <div id="answer"></div>
         <!-- User Answer Submission -->
         <div class="userAnswerSubmission">
-            <form action="/assets/js/quiz.js"> <!--JS can handle the form, so we don't need to use PHP & page won't refresh-->
+            <form action="/assets/js/quiz.js" id="answerForm"> <!--JS can handle the form, so we don't need to use PHP & page won't refresh-->
                 <label for="userAnswer">Write Your answer Here: </label>
                 <input type="text" id="userAnswer" name="userAnswer">
                 <input type="button" value="Submit" onclick="checkAnswer();" >
             </form>
+        </div>
+        <div class="popUp">
+            <div class="popUpText">Congratulations! Genius!</div>
+            <div class="popUpScore">You got x questions correct!</div>
+            <button type="button" class="playAgain" onclick="categoryChoice()">Play Again!</button>
         </div>
     </section>
     <footer>

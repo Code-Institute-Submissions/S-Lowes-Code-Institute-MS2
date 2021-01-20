@@ -78,16 +78,26 @@ startQuiz.addEventListener('click', function(){
 });
 
 // Checking the Answer
-
 function checkAnswer() {
-    // send `submit` request to server
+    /*
     console.log(document.getElementById("answer").innerHTML);
     console.log(document.getElementById("userAnswer").value);
     console.log(stringSimilarity.compareTwoStrings(document.getElementById("answer").innerHTML, document.getElementById("userAnswer").value));
-    // ^ check that we are getting the correct values.
+    */
+    // Use stringSimilarity.compareTwoStrings to check the answer
     if (stringSimilarity.compareTwoStrings(document.getElementById("answer").innerHTML, document.getElementById("userAnswer").value)>=0.6){
         score++
+        document.getElementById("hostSpeech").innerHTML = "Well Done! You got it correct.";
+    } else {
+        document.getElementById("hostSpeech").innerHTML = "Oh no! Better luck next time.";
+        let popUp = document.querySelector('.popUp');
+        popUp.style.visibility = 'visible';
+        popUp.querySelector('.popUpScore').innerHTML = 'You got ' + score + ' questions correct!';
     }
-    console.log(score)
-    document.getElementById("userAnswer").value="";
+    document.getElementById("answerForm").reset(); //reset the form for next question
 }
+
+
+let startGame = function startGame() {
+    reloadGame();
+};
