@@ -118,12 +118,12 @@ The space to share any resources I have used to help me build this project.
 
 1. [Pixabay](https://pixabay.com/) Used for quiz host images.
 
+1. [Shutterstock](https://www.shutterstock.com/home) Space Vessel Interior (Background)
+
 1. [Bootstrap4.5.2](https://getbootstrap.com/): Bootstrap Library used throughout the project.
 
 
 1. [Multi Media Mockup](https://techsini.com/multi-mockup/): For the README.
-
-1. [Unsplash](https://unsplash.com/) & [Pexels](https://www.pexels.com/): Used both these websites to find free images, Unsplash was most useful.
 
 ### Acknowledgements
 
