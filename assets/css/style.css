@@ -7,17 +7,9 @@ html, body {
     overflow-x: hidden;
     overflow-y:auto;
     font-family: "Oswald", "Yusei Magic", sans-serif;
+    color: #7cc778;
+    text-shadow: 1px 1px #b6eda3;
     box-sizing: border-box;
-}
-
-section {
-    background: url("../images/planetHub/shuttleInterior.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
-    height: 50%;
-    width: 50%;
 }
 
 /*--------Header--------*/
@@ -82,8 +74,16 @@ header {
     text-shadow: 1px 1px #b6eda3;
 }
 
-#answer { 
-    display: none; /*display: none; /* hidden is for visibility, we want display none: To hide the current answer*/
+/*--------SECTION--------*/
+
+.triviaBackground {
+    background: url("../images/planetHub/shuttleInterior.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
 }
 
 .triviaHost {
@@ -95,6 +95,10 @@ header {
     background-size: contain;
     height: 200px;
     width: 200px;
+}
+
+#answer { 
+    display: none; /*display: none; /* hidden is for visibility, we want display none: To hide the current answer*/
 }
 /*--------CATEGORY MENU--------*/
 
