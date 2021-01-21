@@ -11,13 +11,13 @@ html, body {
 }
 
 section {
-    background: url("../images/planetHub/shutterstock_1501202084-1.png");
+    background: url("../images/planetHub/shuttleInterior.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
-    height: 100%;
-    width: 100%;
+    height: 50%;
+    width: 50%;
 }
 
 /*--------Header--------*/
