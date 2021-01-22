@@ -84,6 +84,7 @@ header {
     display: inline-block;
     height: 100%;
     width: 100%;
+    padding: 10% 10% 10% 10%;
 }
 
 .triviaHost {
@@ -95,6 +96,10 @@ header {
     background-size: contain;
     height: 200px;
     width: 200px;
+}
+
+.categoryChoice {
+     text-align: right;
 }
 
 #answer { 
