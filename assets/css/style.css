@@ -76,21 +76,19 @@ header {
 
 /*--------SECTION--------*/
 
-.triviaBackground {
-    background: url("../images/planetHub/shuttleInterior.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    padding: 10% 10% 10% 10%;
+.quiz {
+    background-color: red;
+}
+
+img {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
 }
 
 .triviaHost {
     background: url("../images/quizHost/alien_question1.png");
-    margin-top: 15px;
-    margin-bottom: 15px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -99,7 +97,7 @@ header {
 }
 
 .categoryChoice {
-     text-align: right;
+     text-align: initial;
 }
 
 #answer { 

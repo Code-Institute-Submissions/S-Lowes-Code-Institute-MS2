@@ -22,7 +22,8 @@
 		</div>
     </header>
     <section>
-        <div class="triviaBackground">
+        <div class="quiz">
+            <img src="assets/images/planetHub/shuttleInterior.jpg">
             <div class="triviaHost">
                 <div class="hostSpeech">                  
                     <h2 id="hostSpeech">Welcome to Quiz</h2>
@@ -37,7 +38,7 @@
                 <button id="catE">Sports</button> <!-- 42: http://jservice.io/api/category?id=42 -->
                 <button id="catF">Hodgepodge</button> <!-- 227: http://jservice.io/api/category?id=227 -->
             </div>
-            <!-- The Question & Answer (temp)-->
+            <!-- The Question & Answer + startQuiz/NextQuestion button-->
             <button id="startQuiz">Start Quiz</button>
             <div id="question"></div>
             <div id="answer"></div>
@@ -49,6 +50,7 @@
                     <input type="button" value="Submit" onclick="checkAnswer();" >
                 </form>
             </div>
+            <!-- The popUp results -->
             <div class="popUp">
                 <div class="popUpText">Congratulations! Genius!</div>
                 <div class="popUpCategory">You chose the x category</div>
