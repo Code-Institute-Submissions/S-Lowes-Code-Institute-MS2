@@ -23,40 +23,46 @@
     </header>
     <section>
         <div class="quiz">
-            <img src="assets/images/planetHub/shuttleInterior.jpg">
-            <div class="triviaHost">
-                <div class="hostSpeech">                  
-                    <h2 id="hostSpeech">Welcome to Quiz</h2>
+            <div class="triviaHostBackground">
+                <div class="triviaHost">
+                    <img src="../assets/images/quizHost/alien_question1.png" alt="Alien Trivia Host" height="15%" width="15%">
+                    <div class="example bubble-wrap">
+                        <div class="bubble left" id="hostSpeech">
+                            Hello Test Subject C-0-D-3, Ready to commence testing?
+                        </div>
+                    </div>  
+                </div> 
+            </div>
+            <div class="quizContent">
+                <!-- Choose a Category -->
+                <div class="categoryChoice">
+                    <button id="catA">Animals</button> <!-- 21: http://jservice.io/api/category?id=21 -->
+                    <button id="catB">History</button> <!-- 114: http://jservice.io/api/category?id=114 -->
+                    <button id="catC">Mythology</button> <!-- 680: http://jservice.io/api/category?id=680 -->
+                    <button id="catD">Science</button> <!-- 25: http://jservice.io/api/category?id=21 -->
+                    <button id="catE">Sports</button> <!-- 42: http://jservice.io/api/category?id=42 -->
+                    <button id="catF">Hodgepodge</button> <!-- 227: http://jservice.io/api/category?id=227 -->
                 </div>
-            </div>
-            <!-- Choose a Category -->
-            <div class="categoryChoice">
-                <button id="catA">Animals</button> <!-- 21: http://jservice.io/api/category?id=21 -->
-                <button id="catB">History</button> <!-- 114: http://jservice.io/api/category?id=114 -->
-                <button id="catC">Mythology</button> <!-- 680: http://jservice.io/api/category?id=680 -->
-                <button id="catD">Science</button> <!-- 25: http://jservice.io/api/category?id=21 -->
-                <button id="catE">Sports</button> <!-- 42: http://jservice.io/api/category?id=42 -->
-                <button id="catF">Hodgepodge</button> <!-- 227: http://jservice.io/api/category?id=227 -->
-            </div>
-            <!-- The Question & Answer + startQuiz/NextQuestion button-->
-            <button id="startQuiz">Start Quiz</button>
-            <div id="question"></div>
-            <div id="answer"></div>
-            <!-- User Answer Submission -->
-            <div class="userAnswerSubmission">
-                <form action="/assets/js/quiz.js" id="answerForm"> <!--JS can handle the form, so we don't need to use PHP & page won't refresh-->
-                    <label for="userAnswer">Write Your answer Here: </label>
-                    <input type="text" id="userAnswer" name="userAnswer">
-                    <input type="button" value="Submit" onclick="checkAnswer();" >
-                </form>
-            </div>
-            <!-- The popUp results -->
-            <div class="popUp">
-                <div class="popUpText">Congratulations! Genius!</div>
-                <div class="popUpCategory">You chose the x category</div>
-                <div class="popUpScore">You got x questions correct!</div>
-                <div class="popUpSocials">Share Your Score:</div>
-                <button type="button" class="playAgain" onclick="restartGame()">Play Again!</button>
+                <!-- The Question & Answer + startQuiz/NextQuestion button-->
+                <button id="startQuiz">Start Quiz</button>
+                <div id="question"></div>
+                <div id="answer"></div>
+                <!-- User Answer Submission -->
+                <div class="userAnswerSubmission">
+                    <form action="/assets/js/quiz.js" id="answerForm"> <!--JS can handle the form, so we don't need to use PHP & page won't refresh-->
+                        <label for="userAnswer">Write Your answer Here: </label>
+                        <input type="text" id="userAnswer" name="userAnswer">
+                        <input type="button" value="Submit" onclick="checkAnswer();" >
+                    </form>
+                </div>
+                <!-- The popUp results -->
+                <div class="popUp">
+                    <div class="popUpText">Congratulations! Genius!</div>
+                    <div class="popUpCategory">You chose the x category</div>
+                    <div class="popUpScore">You got x questions correct!</div>
+                    <div class="popUpSocials">Share Your Score:</div>
+                    <button type="button" class="playAgain" onclick="restartGame()">Play Again!</button>
+                </div>
             </div>
         </div>
     </section>
