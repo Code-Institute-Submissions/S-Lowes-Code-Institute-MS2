@@ -10,6 +10,7 @@ html, body {
     color: #7cc778;
     text-shadow: 1px 1px #b6eda3;
     box-sizing: border-box;
+    background-color: #23232b;
 }
 
 /*--------Header--------*/
@@ -26,9 +27,9 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    display: inline-block;
     height: 100px;
     width: 100px;
-    display: inline-block;
 }
 
 .headerTriviaHost:hover {
@@ -75,32 +76,32 @@ header {
 }
 
 /*--------SECTION--------*/
-
-.triviaHostBackground {
-    background: url("../images/planetHub/shuttleInterior.jpg");
+.quizBackground{
+    background-image: url("../images/planetHub/shuttleInterior.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 100%;
-    /*text-align: center;*/
-    
+    display: flex;
+    height: 500px;
 }
 
-.triviaHost {
-    position: relative;
+.quizHost{
+    background-image: url("../images/quizHost/alien_struggle1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    margin-right: 0px;
 }
-
-.example {
-   position: absolute;
-   top: 10px;
-   left: 10px; 
-    padding: 5px;
-}
-
-/*--------QuizHostSpeech--------*/
+/*--------Speech Bubble--------*/
 
 .bubble-wrap {
   width: 300px;
+  margin: auto;
+  margin-left: 0px;
 }
 
 .bubble {
