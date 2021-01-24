@@ -76,6 +76,11 @@ header {
 }
 
 /*--------SECTION--------*/
+
+/*--------Part1--------*/
+
+/* Quiz Background */
+
 .quizBackground{
     background-image: url("../images/planetHub/shuttleInterior.jpg");
     background-position: center;
@@ -85,8 +90,10 @@ header {
     height: 500px;
 }
 
+/* Quiz Host */
+
 .quizHost{
-    background-image: url("../images/quizHost/alien_struggle1.png");
+    background-image: url("../images/quizHost/alien_question1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -94,14 +101,15 @@ header {
     height: 200px;
     width: 200px;
     margin: auto;
-    margin-right: 0px;
+    margin-bottom: 4rem;
 }
-/*--------Speech Bubble--------*/
+/* Quiz Speech/Bubble-Wrap */
 
 .bubble-wrap {
   width: 300px;
   margin: auto;
-  margin-left: 0px;
+  margin-left: 200px;
+  margin-right: -200px;
 }
 
 .bubble {
@@ -142,11 +150,13 @@ header {
   top: 50%;
   margin-top: -16px;
 }
+/*--------Part2--------*/
 
-/*--------Quiz Content--------*/
+/* Quiz Content */
 
-.categoryChoice {
-     text-align: initial;
+.quizContent {
+    display: block;
+    text-align: center;
 }
 
 #answer { 
