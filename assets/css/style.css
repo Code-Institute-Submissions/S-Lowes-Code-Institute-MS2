@@ -87,7 +87,7 @@ header {
     background-repeat: no-repeat;
     background-size: contain;
     display: flex;
-    height: 500px;
+    height: 400px;
 }
 
 /* Quiz Host */
@@ -158,7 +158,29 @@ header {
     display: block;
     text-align: center;
 }
+/* Button */
 
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 0 0 0;
+  font-size: 24px;
+  text-align: center;
+  outline: none;
+  color: #23232b;
+  background-color: #fff8ee;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #8c6f5f;
+}
+
+button:hover {background-color: #ddcbb7}
+
+button:active {
+  background-color: #ddcbb7;
+  box-shadow: 0 5px #8c6f5f;
+  transform: translateY(4px);
+}
 #answer { 
     display: none; /*display: none; /* hidden is for visibility, we want display none: To hide the current answer*/
 }
