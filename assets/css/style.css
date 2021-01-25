@@ -7,9 +7,8 @@ html, body {
     overflow-x: hidden;
     overflow-y:auto;
     font-family: "Oswald", "Yusei Magic", sans-serif;
-    color: #7cc778;
-    text-shadow: 1px 1px #b6eda3;
     box-sizing: border-box;
+    color: #fafafa;
     background-color: #23232b;
 }
 
@@ -110,6 +109,7 @@ header {
   margin: auto;
   margin-left: 200px;
   margin-right: -200px;
+  color: #23232b;
 }
 
 .bubble {
@@ -133,8 +133,7 @@ header {
   z-index: 1;
   left: -15px;
   top: 50%;
-  margin-top: -16px
-  
+  margin-top: -16px;
 }
 
 .bubble.left:before {
@@ -163,8 +162,8 @@ header {
 
 .quizButtons {
   display: inline-block;
+margin: 10px 0 0 0;
   padding: 10px 20px;
-  margin: 10px 0 0 0;
   font-size: 24px;
   text-align: center;
   outline: none;
@@ -172,16 +171,46 @@ header {
   background-color: #fff8ee;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #8c6f5f;
+  box-shadow: 0 6px #8c6f5f;
 }
 
 .quizButtons:hover {background-color: #ddcbb7}
 
 .quizButtons:active {
   background-color: #ddcbb7;
-  box-shadow: 0 5px #8c6f5f;
+  box-shadow: 0 2px #8c6f5f;
   transform: translateY(4px);
 }
+
+/* User Answer Submission */
+
+.userAnswerSubmission {
+    display: inline-block;
+    color: #23232b;
+    background-color: #fff8ee;
+    border-radius: 15px;
+    margin: 10px 0 0 0;
+    padding: 10px 20px 20px 10px;
+}
+
+#submitButton {
+    background-color: #95a31a;
+    box-shadow: 0 6px #646e12;
+    color: #fafafa;
+}
+
+#submitButton:hover {background-color: #829613}
+
+#submitButton:active {
+  background-color: #829613;
+  box-shadow: 0 2px #646e12;
+}
+/* Hidden Elements */
+
+#question { 
+    display: none;
+}
+
 #answer { 
     display: none; /*display: none; /* hidden is for visibility, we want display none: To hide the current answer*/
 }
