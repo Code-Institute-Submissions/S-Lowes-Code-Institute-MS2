@@ -158,9 +158,10 @@ header {
     display: block;
     text-align: center;
 }
+
 /* Button */
 
-button {
+.quizButtons {
   display: inline-block;
   padding: 10px 20px;
   margin: 10px 0 0 0;
@@ -174,9 +175,9 @@ button {
   box-shadow: 0 9px #8c6f5f;
 }
 
-button:hover {background-color: #ddcbb7}
+.quizButtons:hover {background-color: #ddcbb7}
 
-button:active {
+.quizButtons:active {
   background-color: #ddcbb7;
   box-shadow: 0 5px #8c6f5f;
   transform: translateY(4px);
