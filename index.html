@@ -12,12 +12,8 @@
     <header>
         <div>
 			<nav class="nav-bar">
-                <div class="headerTriviaHost"></div>
-                <h1>Trivia Quiz</h1>
-					<ul class="nav-links">
-						<li class="nav-item"><a href="index.html" class="">Home/Quiz</a></li>
-						<li class="nav-item"><a href="" class="">About</a></li>
-					</ul>
+                <a class="headerTriviaHost" href="index.html"></a>
+                <h1>The Trivia Alien</h1>
 			</nav>
 		</div>
     </header>
@@ -28,7 +24,7 @@
                     <!--Quiz host image used a background for div-->
                     <div class="bubble-wrap">
                         <div class="bubble left" id="hostSpeech">
-                            Hello human surveilance bot 2043, to begin testing choose a category & begin the trials.
+                            Hello human surveilance bot 2043, to start choose a category & begin the tests.
                         </div>
                     </div>
                 </div>
@@ -61,12 +57,16 @@
                     <div class="popUpCategory">You chose the x category</div>
                     <div class="popUpScore">You got x questions correct!</div>
                     <div class="popUpSocials">Share Your Score:</div>
-                    <button  type="button" class="playAgain" onclick="restartGame()">Play Again!</button>
+                    <a class="socials" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+					<a class="socials" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a>
+					<a class="socials" href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                    <button id="replayButton" class="quizButtons" type="button" onclick="restartGame()">Play Again!</button>
                 </div>
             </div>
         </div>
     </section>
     <footer>
+        <a class="footerGitLink" href="https://github.com/S-Lowes/Code-Institute-MS2" target="_blank"><i class="fab fa-github-square"></i></a>
     </footer>
     <!--Scripts-->
     <script src="/assets/js/quiz.js"></script>

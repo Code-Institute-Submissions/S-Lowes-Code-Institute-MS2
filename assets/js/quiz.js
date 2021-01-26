@@ -45,6 +45,9 @@ function category(a,b) { // Fetch taken from "https://developers.google.com/web/
   });
   let categoryChoice = document.querySelector('.categoryChoice');
   categoryChoice.style.display = 'none';
+
+  let startQuiz = document.querySelector('#startQuiz');
+  startQuiz.style.display = 'inline-block';
 }
 
 // Event listener for category choice
@@ -62,8 +65,6 @@ startQuiz.addEventListener('click', function(){
     //Make Button Disappear
     let startQuiz = document.querySelector('#startQuiz');
     startQuiz.style.display = 'none';
-
-    document.getElementById("hostSpeech").innerHTML = "This is a tough one!";
     // Create random # & check it is unused - We don't want repeat questions
     const numberOfQuestions = categoryData.clues_count; // Each category has a different number of questions
     min = Math.ceil(0);
@@ -81,10 +82,15 @@ startQuiz.addEventListener('click', function(){
     const answer = categoryData.clues[randomQuestionNumber].answer;
     document.getElementById("question").innerHTML = question;
     document.getElementById("answer").innerHTML = answer;
+    document.getElementById("hostSpeech").innerHTML = question;
+
+    let userAnswerSubmission = document.querySelector('.userAnswerSubmission');
+    userAnswerSubmission.style.display = 'inline-block';
 });
 
 // Checking the Answer
 function checkAnswer() {
+    const title = categoryData.title;
     /*
     console.log(document.getElementById("answer").innerHTML);
     console.log(document.getElementById("userAnswer").value);
@@ -94,6 +100,9 @@ function checkAnswer() {
     if (stringSimilarity.compareTwoStrings(document.getElementById("answer").innerHTML, document.getElementById("userAnswer").value)>=0.6){
         score++
         document.getElementById("hostSpeech").innerHTML = "Well Done! You got it correct.";
+        
+        let userAnswerSubmission = document.querySelector('.userAnswerSubmission');
+        userAnswerSubmission.style.display = 'none';
 
         let startQuiz = document.querySelector('#startQuiz');
         startQuiz.style.display = 'initial';
@@ -101,8 +110,11 @@ function checkAnswer() {
     } else {
         document.getElementById("hostSpeech").innerHTML = "Oh no! Better luck next time.";
         //popUp gives the user a message regarding their run
+        let userAnswerSubmission = document.querySelector('.userAnswerSubmission');
+        userAnswerSubmission.style.display = 'none';
         let popUp = document.querySelector('.popUp');
-        popUp.style.visibility = 'visible';
+        popUp.style.display = 'inline-block';
+        popUp.querySelector('.popUpCategory').innerHTML = 'You chose the ' + title + ' category';
         popUp.querySelector('.popUpScore').innerHTML = 'You got ' + score + ' questions correct!';
     }
     document.getElementById("answerForm").reset(); //reset the form for next question

@@ -26,14 +26,13 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    display: inline-block;
     height: 100px;
     width: 100px;
 }
 
 .headerTriviaHost:hover {
     animation: shake 0.5s;
-  animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }
 
 @keyframes shake {
@@ -56,22 +55,6 @@ header {
     padding-right: 20px;
     display: flex;
     align-items: center;
-    transition: all 0.5s ease;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    margin-bottom: 0px;
-    padding-left: 0px;
-}
-
-.nav-item a {
-    display: inline-block;
-    text-decoration: none;
-    padding-left: 15px;
-    color: #7cc778;
-    text-shadow: 1px 1px #b6eda3;
 }
 
 /*--------SECTION--------*/
@@ -86,7 +69,7 @@ header {
     background-repeat: no-repeat;
     background-size: contain;
     display: flex;
-    height: 400px;
+    height: 400px; /* <- Will need to change based on screen size */
 }
 
 /* Quiz Host */
@@ -156,13 +139,20 @@ header {
 .quizContent {
     display: block;
     text-align: center;
+    height: 300px; /*height of the popUp*/
 }
+
+/*--------CATEGORY MENU--------*/
 
 /* Button */
 
+#startQuiz {
+    display: none;
+}
+
+
 .quizButtons {
-  display: inline-block;
-margin: 10px 0 0 0;
+  margin: 10px 0 0 0;
   padding: 10px 20px;
   font-size: 24px;
   text-align: center;
@@ -174,7 +164,9 @@ margin: 10px 0 0 0;
   box-shadow: 0 6px #8c6f5f;
 }
 
-.quizButtons:hover {background-color: #ddcbb7}
+.quizButtons:hover {
+    background-color: #ddcbb7;
+}
 
 .quizButtons:active {
   background-color: #ddcbb7;
@@ -185,7 +177,7 @@ margin: 10px 0 0 0;
 /* User Answer Submission */
 
 .userAnswerSubmission {
-    display: inline-block;
+    display: none; /*inline-block*/
     color: #23232b;
     background-color: #fff8ee;
     border-radius: 15px;
@@ -193,15 +185,20 @@ margin: 10px 0 0 0;
     padding: 10px 20px 20px 10px;
 }
 
-#submitButton {
+#submitButton,
+#replayButton {
     background-color: #95a31a;
     box-shadow: 0 6px #646e12;
     color: #fafafa;
 }
 
-#submitButton:hover {background-color: #829613}
+#submitButton:hover,
+#replayButton:hover {
+    background-color: #829613;
+}
 
-#submitButton:active {
+#submitButton:active,
+#replayButton:active {
   background-color: #829613;
   box-shadow: 0 2px #646e12;
 }
@@ -214,10 +211,45 @@ margin: 10px 0 0 0;
 #answer { 
     display: none; /*display: none; /* hidden is for visibility, we want display none: To hide the current answer*/
 }
-/*--------CATEGORY MENU--------*/
 
 /*--------POPUP MODAL--------*/
 
 .popUp {
-    visibility: hidden;  
+    display: none;
+    color: #23232b;
+    background-color: #fff8ee;
+    border-radius: 15px;
+    margin: 10px 0 0 0;
+    padding: 10px 20px 20px 10px;
+}
+
+.socials {
+display: block;
+width: 100%;
+padding: .25rem 1.5rem;
+clear: both;
+font-weight: 400;
+color: #23232b;
+text-align: inherit;
+background-color: transparent;
+border: 0;
+}
+
+.socials:hover {
+    color: #829613;
+    text-decoration: none;
+}
+
+/*--------Footer--------*/
+
+.footerGitLink {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 40px;
+    color: #fff8ee;
+}
+
+.footerGitLink:hover {
+    color: #ddcbb7;
 }
