@@ -17,14 +17,14 @@ const startQuiz = document.getElementById("startQuiz");
 
 // Choose a Category - Grab Category from jService
 
-function category(a,b) { // Fetch taken from "https://developers.google.com/web/updates/2015/03/introduction-to-fetch"
+async function category(a,b) { // Fetch taken from "https://developers.google.com/web/updates/2015/03/introduction-to-fetch"
     console.log(a);
     cat=b;
     console.log(cat); // Display ID of chosen category
 
     var c = cat.toString(); // We use this with the jService address to access that particular category.
 
-    fetch('https://jservice.io/api/category?id='+c) //Accessing the jService API - https worked, http didn't
+    await fetch('https://jservice.io/api/category?id='+c) //Accessing the jService API - https worked, http didn't
     .then(
       function(response) {
       if (response.status !== 200) {
@@ -43,6 +43,7 @@ function category(a,b) { // Fetch taken from "https://developers.google.com/web/
   .catch(function(err) {
     console.log('Fetch Error :-S', err);
   });
+
   let categoryChoice = document.querySelector('.categoryChoice');
   categoryChoice.style.display = 'none';
 
@@ -91,13 +92,20 @@ startQuiz.addEventListener('click', function(){
 // Checking the Answer
 function checkAnswer() {
     const title = categoryData.title;
-    /*
-    console.log(document.getElementById("answer").innerHTML);
-    console.log(document.getElementById("userAnswer").value);
-    console.log(stringSimilarity.compareTwoStrings(document.getElementById("answer").innerHTML, document.getElementById("userAnswer").value));
-    */
+
+    var ans = document.getElementById("answer").innerHTML
+    var userAns = document.getElementById("userAnswer").value
+
+    var ansLower = ans.toLowerCase();
+    var userAnsLower = userAns.toLowerCase();
+
+    
+    console.log(ansLowes);
+    console.log(userAnsLower);
+    console.log(stringSimilarity.compareTwoStrings(ansLower, userAnsLower));
+    
     // Use stringSimilarity.compareTwoStrings to check the answer
-    if (stringSimilarity.compareTwoStrings(document.getElementById("answer").innerHTML, document.getElementById("userAnswer").value)>=0.6){
+    if (stringSimilarity.compareTwoStrings(ansLower, userAnsLower)>=0.6){
         score++
         document.getElementById("hostSpeech").innerHTML = "Well Done! You got it correct.";
         
