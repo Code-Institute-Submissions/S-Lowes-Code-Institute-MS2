@@ -144,7 +144,7 @@ function checkAnswer() {
         startQuiz.style.display = 'initial';
         document.getElementById('startQuiz').innerHTML = 'Next Question';
     } else {
-        document.getElementById("hostSpeech").innerHTML = "Oh no! Better luck next time.";
+        document.getElementById("hostSpeech").innerHTML = "Oh no! Better luck next time. The answer I was looking for was: " + ans;
         //popUp gives the user a message regarding their run
         let userAnswerSubmission = document.querySelector('.userAnswerSubmission');
         userAnswerSubmission.style.display = 'none';
