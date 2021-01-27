@@ -22,6 +22,9 @@ async function category(a,b) { // Fetch taken from "https://developers.google.co
     cat=b;
     console.log(cat); // Display ID of chosen category
 
+    let categoryChoice = document.querySelector('.categoryChoice');
+    categoryChoice.style.display = 'none';
+
     var c = cat.toString(); // We use this with the jService address to access that particular category.
 
     await fetch('https://jservice.io/api/category?id='+c) //Accessing the jService API - https worked, http didn't
@@ -43,9 +46,6 @@ async function category(a,b) { // Fetch taken from "https://developers.google.co
   .catch(function(err) {
     console.log('Fetch Error :-S', err);
   });
-
-  let categoryChoice = document.querySelector('.categoryChoice');
-  categoryChoice.style.display = 'none';
 
   let startQuiz = document.querySelector('#startQuiz');
   startQuiz.style.display = 'inline-block';
