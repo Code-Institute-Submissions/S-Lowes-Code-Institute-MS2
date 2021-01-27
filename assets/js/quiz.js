@@ -47,6 +47,11 @@ async function category(a,b) { // Fetch taken from "https://developers.google.co
     console.log('Fetch Error :-S', err);
   });
 
+  document.getElementById("hostSpeech").innerHTML = "When ready, press the button & I'll ask you a question";
+
+  let quizHost = document.querySelector('.quizHost');
+  quizHost.style.backgroundImage ='url("assets/images/quizHost/alien_happy2.png")';
+
   let startQuiz = document.querySelector('#startQuiz');
   startQuiz.style.display = 'inline-block';
 }
@@ -66,6 +71,10 @@ startQuiz.addEventListener('click', function(){
     //Make Button Disappear
     let startQuiz = document.querySelector('#startQuiz');
     startQuiz.style.display = 'none';
+
+    let quizHost = document.querySelector('.quizHost');
+    quizHost.style.backgroundImage ='url("assets/images/quizHost/alien_question1.png")';
+
     // Create random # & check it is unused - We don't want repeat questions
     const numberOfQuestions = categoryData.clues_count; // Each category has a different number of questions
     min = Math.ceil(0);
@@ -89,6 +98,16 @@ startQuiz.addEventListener('click', function(){
     userAnswerSubmission.style.display = 'inline-block';
 });
 
+//Using enter key to submit answer on form
+
+var input = document.getElementById("userAnswer"); // Seems to work, but having same issue with js being displayed
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("submitButton").click();
+  }
+});
+
 // Checking the Answer
 function checkAnswer() {
     const title = categoryData.title;
@@ -100,7 +119,7 @@ function checkAnswer() {
     var userAnsLower = userAns.toLowerCase();
 
     
-    console.log(ansLowes);
+    console.log(ansLower);
     console.log(userAnsLower);
     console.log(stringSimilarity.compareTwoStrings(ansLower, userAnsLower));
     
@@ -108,6 +127,9 @@ function checkAnswer() {
     if (stringSimilarity.compareTwoStrings(ansLower, userAnsLower)>=0.6){
         score++
         document.getElementById("hostSpeech").innerHTML = "Well Done! You got it correct.";
+
+        let quizHost = document.querySelector('.quizHost');
+        quizHost.style.backgroundImage ='url("assets/images/quizHost/alien_happy3.png")';
         
         let userAnswerSubmission = document.querySelector('.userAnswerSubmission');
         userAnswerSubmission.style.display = 'none';
@@ -124,6 +146,9 @@ function checkAnswer() {
         popUp.style.display = 'inline-block';
         popUp.querySelector('.popUpCategory').innerHTML = 'You chose the ' + title + ' category';
         popUp.querySelector('.popUpScore').innerHTML = 'You got ' + score + ' questions correct!';
+
+        let quizHost = document.querySelector('.quizHost');
+        quizHost.style.backgroundImage ='url("assets/images/quizHost/alien_sad1.png")';
     }
     document.getElementById("answerForm").reset(); //reset the form for next question
 }
