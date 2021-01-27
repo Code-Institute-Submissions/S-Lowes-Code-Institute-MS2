@@ -101,12 +101,18 @@ startQuiz.addEventListener('click', function(){
 //Using enter key to submit answer on form
 
 var input = document.getElementById("userAnswer"); // Seems to work, but having same issue with js being displayed
+
 input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
    event.preventDefault();
-   document.getElementById("submitButton").click();
+   checkAnswer();
   }
 });
+
+document.getElementById('answerForm').onsubmit = function(e){
+    e.preventDefault();
+    checkAnswer();
+}
 
 // Checking the Answer
 function checkAnswer() {

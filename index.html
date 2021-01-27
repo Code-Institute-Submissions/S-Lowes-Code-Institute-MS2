@@ -46,7 +46,7 @@
                 <div id="answer"></div>
                 <!-- User Answer Submission -->
                 <div class="userAnswerSubmission">
-                    <form action="/assets/js/quiz.js" id="answerForm"> <!--JS can handle the form, so we don't need to use PHP & page won't refresh-->
+                    <form id="answerForm"> <!--credit Scott for help with js bug-->
                         <label for="userAnswer">Write Your answer Here: </label>
                         <input type="text" id="userAnswer" name="userAnswer">
                         <input id="submitButton" class="quizButtons" type="button" value="Submit" onclick="checkAnswer();" >
