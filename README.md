@@ -1,53 +1,45 @@
 <h1 align="center">MS2</h1>
 
-
-STILL NEED TO DO THIS!
-
-
-- http://jservice.io/
-- https://www.npmjs.com/package/string-similarity#comparetwostringsstring1-string2
-
-This is a website for a random trivia quiz using the jService api. Designed to be eye-catching, responsive & accessible on different devices.
+This is a trivia website using the jService api and string-similarity api. Designed to be eye-catching, responsive & interactive.
 
 ## User Experience
 
 ### User Stories
 
 - First Time Visitor
-    - When I visit this site I want to understand what the site does and how I can interact with it.
-    - I would also like to be able to navigate through the site and interact with it easily.
+    - When I visit this site I want to understand how I can interact with the website.
+    - I would want to attempt the test/quiz in a category of my choice.
 - Returning Visitor
-    - As a returning visitor I may be looking to improve my score in the quiz to see if I can get further.
+    - As a returning visitor I may simply be looking to improve my score or try a new category.
+    - I may also want to share my results on my social media channels.
 - Frequent User
     - As a frequent user I would be consistently be looking to improve my score in the quiz.
 
 ### Design
 
 - Color Scheme
-    - Will likely be tied to whatever picture I can find for my quiz guy.
+    - This will likely be dictated by my creative elements that I find. So with that in mind I chose a background color that would blend with the central image I use. Any buttons and text I try to use colors from the console in the image so that we have a constistent theme.
 
 - Typography
-    - Montserrat?
+    - I used Yusei Magic for the header and Oswald elsewhere.
 - Imagery
-    - I think having images of people using the gym is a useful way to show the equipment available but also to make the website more appealing.
+    - I found a selection of emoji expressions that I thought would work well at different moments during a playthrough (correct/incorrect etc.). These emojis happened to be of an alien so I decided to theme my website design around space.
 
 - Wireframes
-    - I created Wireframes for various extra pages such as membership forms and an about us page. However, these extra pages and are not core to the design of the website so are not included.
-        - [Home Page](/workspace/Code-Institute-MS2/documentation/)
-            1. Start of Quiz.
-        - [Quiz Page](/workspace/Code-Institute-MS2/documentation/)
-            1. Quiz format itself.
+    - I created wireframes for the basic ideas I had and then added more details as I went along. I also made a flowchart to help me envision the steps taken during a playthrough of the quiz.
+        - [Quiz Page]() Empty
+        - [Flowchart]() Empty
 
 ## Features
 
-- The website should be responsive across different devices. (hopefully)
-- The website should also be extremely interactive and user friendly. (Using the string similarity api to make the quiz answers friendly)
+- The website should be responsive across different devices.
+- The website will be very interactive and lenient towards user error.
 
 ### Taking The Project Further
 
 If I were taking the project further there are some features I believe would benefit the website and add more functionality to it:
-- History of the users scores ie. a leaderboard. (Local or global?)
-- Possibliy being able to choose a topic for the questions? or having different leaderboards for differetn categories.
+- I'd like the website to record the users previous attempts so they can see their own improvement.
+- Although the social media icons do lead too their respective websites, I would like a more complete share system that writes a post for someone.
 
 ## Technologies
 
@@ -55,19 +47,23 @@ If I were taking the project further there are some features I believe would ben
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [JS](https://en.wikipedia.org/wiki/JavaScript)
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Bootstrap4.5.2](https://getbootstrap.com/):
+1. [jService](https://github.com/sottenad/jService)
 
-1. [Hover.css](http://ianlunn.github.io/Hover/):
+1. [String-Similarity](https://github.com/aceakash/string-similarity#readme)
+
+1. [Fetch](https://developers.google.com/web/updates/2015/03/introduction-to-fetch)
+
+1. [Bootstrap4.5.2](https://getbootstrap.com/):
 
 1. [Gitpod](https://www.gitpod.io/): 
 
 1. [Github](https://github.com/):
 
 1. [Google Fonts](https://fonts.google.com/?query=Oswa):
-
 
 1. [Font Awesome](https://fontawesome.com/):
 
@@ -78,16 +74,27 @@ If I were taking the project further there are some features I believe would ben
 The W3C Markup Validator and W3C CSS Validator Services were used to validate all pages of this project. This ensures there were no syntax errors in the project.
 
 
--   [W3C Markup Validator](https://validator.w3.org/) - [Results]()
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results]()
+-   [W3C Markup Validator](https://validator.w3.org/) - [Results]() Empty
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results]() Empty
+-   [JS Validator](https://validatejavascript.com/) - [Results]() Empty
 
 ### Testing User Stories
 
 - First Time Visitor
-    
+    - When I visit this site I want to understand how I can interact with the website.
+        1. Upon entering the site you see the header and title which should hint towards the content of the site.
+        1. At this point the user would notice the quiz host who welcomes the user and suggests they choose a category to begin their test.
+    - I would want to attempt the test/quiz in a category of my choice.
+        1. After a category is chosen the quiz begins and the user can attempt to get as large a score as possible.
+        1. Once the quiz reaches its conclusion the user is prompted to have another ago or share their score.
 - Returning Visitor
-
+    - As a returning visitor I may simply be looking to improve my score or try a new category.
+        1. This is as easy upon returning as it was the first time.
+    - I may also want to share my results on my social media channels.
+        1. A repeat user may be more inclined to share their score which they get the option to do at the end of the quiz.
 - Frequent User
+    - As a frequent user I would be consistently be looking to improve my score in the quiz.
+        1. If I took the project further I would include a leaderboard, however at this moment the user would have to remember their own score.
 
 ### Further Testing
 
@@ -120,16 +127,25 @@ The project was deployed to GitHub Pages using the following steps:
 
 The space to share any resources I have used to help me build this project.
 
+1. [jService](https://github.com/sottenad/jService) The api I used to get my questions.
+
+1. [String-Similarity](https://github.com/aceakash/string-similarity#readme) The api I used to check user answers against the correct answers.
+
+1. [Fetch](https://developers.google.com/web/updates/2015/03/introduction-to-fetch) To access the jService api.
+
+1. [Button](https://www.w3schools.com/csS/css3_buttons.asp) To get the button press effect.
+
 1. [Pixabay](https://pixabay.com/) Used for quiz host images.
 
-1. [Shutterstock](https://www.shutterstock.com/home) Space Vessel Interior (Background)
+1. [Shutterstock](https://www.shutterstock.com/home) Space Vessel Interior (Background).
 
-1. [Bootstrap4.5.2](https://getbootstrap.com/): Bootstrap Library used throughout the project.
+1. [Ben Chao](https://codepen.io/anshing97/pen/qFDBK) Used speech bubble left.
 
+1. [Bootstrap4.5.2](https://getbootstrap.com/): Bootstrap Library used for some basic styling.
 
 1. [Multi Media Mockup](https://techsini.com/multi-mockup/): For the README.
 
 ### Acknowledgements
 
 - My Mentor for the helpful feedback.
-- Tutor support at Code Institute for their support.
+- Scott & Alan from tutor support at Code Institute.
