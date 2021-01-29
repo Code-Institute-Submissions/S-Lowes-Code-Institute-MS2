@@ -213,5 +213,5 @@ The space to share any resources I have used to help me build this project.
 
 ### Acknowledgements
 
-- My Mentor for the helpful feedback.
+- My Mentor Aaron Sinnott for the helpful feedback.
 - Scott & Alan from tutor support at Code Institute.
