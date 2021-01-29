@@ -8,6 +8,17 @@ This is a trivia website using the jService api and string-similarity api. Desig
 
 ### User Journey
 
+1. The user begins at the Homepage and should see the simple instructions "Hello, human surveillance bot. To begin the tests, please choose a category. " which are presented by our alien host.
+<p align="center"><img height="200px" src="documentation/images/readme_homepage.png"></p>
+1. Upon clicking a category the host then prompts the user to start the quiz using the 'Start Quiz' button.
+1. This will lead to the host asking his first question. The user can then enter their answer in the form and then submit with the button.
+<p align="center"><img height="200px" src="documentation/images/readme_submit.png"></p>
+1. They will either be correct or incorrect.
+ - If correct, The user will have be allowed to continue to the next question & the quiz will continue. 
+ <p align="center"><img height="200px" src="documentation/images/readme_correct.png"></p>
+ - If incorrect, then unfortunately the users run is over. A popup appears giving feedback of the users score and category chosen and prompts them to play again.
+ <p align="center"><img height="200px" src="documentation/images/readme_incorrect.png"></p>
+
 ### User Stories
 
 - First Time Visitor
@@ -56,13 +67,14 @@ If I were taking the project further there are some features I believe would ben
 - [CSS3](https://en.wikipedia.org/wiki/CSS)
 - [JS](https://en.wikipedia.org/wiki/JavaScript)
 
-## API's Used
+### API's Used
 
-## [jService](http://jservice.io/)
+#### [jService](http://jservice.io/)
 jServie is a simple trivia service that serves the answers/questions pulled from jArchive. The questions are organised into categories which we can use to make a series of themed questions for the user of this website.
 - JSON of a category: [JSON](https://jservice.io/api/category?id=21)
 - JSON of a random question: [JSON](http://jservice.io/api/random)
-## [StringSimilarity](https://www.npmjs.com/package/string-similarity#for-nodejs)
+
+#### [StringSimilarity](https://www.npmjs.com/package/string-similarity#for-nodejs)
 String Similarity finds the degree of similarity between two strings, based on Dice's Coefficient. Returning a fraction between 0 and 1, which is what indicates the similarity of the strings. We can use this in our website to allow for a users minor spelling mistakes.
 
 ### Frameworks, Libraries & Programs Used
@@ -88,7 +100,7 @@ String Similarity finds the degree of similarity between two strings, based on D
 ## Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate all pages of this project. This ensures there were no syntax errors. I also used formatters for my HTML, CSS & JS.
-
+In the results there was a suggestion to use a h2-h6 element in the HTML section. However, I believe it will not add to the design of the website as it would need to be hidden anyway.
 #### Validators
 -   [W3C Markup Validator](https://validator.w3.org/) - [Results](documentation/images/html_valid.png)
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](documentation/images/css_valid.png)
