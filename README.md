@@ -32,10 +32,10 @@ This is a trivia website using the jService api and string-similarity api. Desig
 
 - Wireframes
     - I created wireframes for the basic ideas I had and then added more details as I went along. I also made a flowchart to help me envision the steps taken during a playthrough of the quiz.
-        - [Home page](/workspace/Code-Institute-MS2/documentation/Wireframe/MS2-Wireframe-Homepage.pdf)
-        - [Question Page](/workspace/Code-Institute-MS2/documentation/Wireframe/MS2-Wireframe-Question.pdf)
-        - [Recap Page](/workspace/Code-Institute-MS2/documentation/Wireframe/MS2-Wireframe-Recap.pdf)
-        - [Flowchart](/workspace/Code-Institute-MS2/documentation/Wireframe/MS2-Wireframe-Flowchart.pdf)
+        - [Home page](documentation/Wireframe/MS2-Wireframe-Homepage.pdf)
+        - [Question Page](documentation/Wireframe/MS2-Wireframe-Question.pdf)
+        - [Recap Page](documentation/Wireframe/MS2-Wireframe-Recap.pdf)
+        - [Flowchart](documentation/Wireframe/MS2-Wireframe-Flowchart.pdf)
 
 ## Features
 
@@ -90,8 +90,8 @@ String Similarity finds the degree of similarity between two strings, based on D
 The W3C Markup Validator and W3C CSS Validator Services were used to validate all pages of this project. This ensures there were no syntax errors. I also used formatters for my HTML, CSS & JS.
 
 #### Validators
--   [W3C Markup Validator](https://validator.w3.org/) - [Results](/workspace/Code-Institute-MS2/documentation/images/html_valid.png)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](/workspace/Code-Institute-MS2/documentation/images/css_valid.png)
+-   [W3C Markup Validator](https://validator.w3.org/) - [Results](documentation/images/html_valid.png)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](documentation/images/css_valid.png)
 
 #### Formatters
 
