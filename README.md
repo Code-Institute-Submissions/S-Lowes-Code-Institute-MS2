@@ -13,16 +13,16 @@ This is a trivia website using the jService api and string-similarity api. Desig
 <p align="center"><img height="200px" src="documentation/images/readme_homepage.png"></p>
 
 1. Upon clicking a category the host then prompts the user to start the quiz using the 'Start Quiz' button.
-1. This will lead to the host asking his first question. The user can then enter their answer in the form and then submit with the button.
+1. This will cause the host to ask his first question. The user can then enter their answer into the form and submit with the 'Submit' button.
 
 <p align="center"><img height="200px" src="documentation/images/readme_submit.png"></p>
 
-1. They will either be correct or incorrect.
- - If correct, The user will have be allowed to continue to the next question & the quiz will continue. 
+1. The host will then determine whether the user is correct or incorrect.
+ - If correct, The user will be allowed to continue to the next question and the quiz will continue. 
 
  <p align="center"><img height="200px" src="documentation/images/readme_correct.png"></p>
 
- - If incorrect, then unfortunately the users run is over. A popup appears giving feedback of the users score and category chosen and prompts them to play again.
+ - If incorrect, then unfortunately the users run is over. A popup appears giving feedback to the user and prompts them to play again.
 
  <p align="center"><img height="200px" src="documentation/images/readme_incorrect.png"></p>
 
@@ -30,23 +30,22 @@ This is a trivia website using the jService api and string-similarity api. Desig
 
 - First Time Visitor
     - When I visit this site I want to understand how I can interact with the website.
-    - I would want to attempt the test/quiz in a category of my choice.
+    - I would want to attempt the quiz in a category of my choice.
 - Returning Visitor
     - As a returning visitor I may simply be looking to improve my score or try a new category.
     - I may also want to share my interest in the site via social media.
 - Frequent User
-    - As a frequent user I would be consistently be looking to improve my score in the quiz.
+    - As a frequent user I would consistently be looking to improve my score.
     - I may also be interested in the developent of the game.
 
 ### Design
 
-- Color Scheme
-    - This will likely be dictated by my creative elements that I find. So with that in mind I chose a background color that would blend with the central image I use. Any buttons and text I try to use colors from the console in the image so that we have a constistent theme.
-
+- Colour Scheme
+    - This will likely be dictated by the creative elements that I find. So with that in mind I chose a background color that would blend with the central image. Any buttons and text I will try to use colors from the image so that we have a constistent theme.
 - Typography
     - I used Yusei Magic for the header and Oswald elsewhere.
 - Imagery
-    - I found a selection of emoji expressions that I thought would work well at different moments during a playthrough (correct/incorrect etc.). These emojis happened to be of an alien so I decided to theme my website design around space.
+    - I found a selection of emoji expressions that I thought would work well at different moments during a playthrough (correct/incorrect etc.). These emojis happened to be of an alien so I decided to theme my website around space.
 
 - Wireframes
     - I created wireframes for the basic ideas I had and then added more details as I went along. I also made a flowchart to help me envision the steps taken during a playthrough of the quiz.
@@ -62,9 +61,9 @@ This is a trivia website using the jService api and string-similarity api. Desig
 
 ### Taking The Project Further
 
-If I were taking the project further there are some features I believe would benefit the website and add more functionality to it:
-- I'd like the website to record the users previous attempts so they can see their own improvement.
-- Although the social media icons do lead too their respective websites, I would like a more complete share system that writes a post for someone.
+If I were taking the project further there are some features I believe would the website would benefit from:
+- I would like the website to record the users previous attempts so they can see their own improvement.
+- Although the social media icons do lead to their respective websites, I would like a more complete share system that writes a post for the user.
 
 ## Technologies
 
@@ -106,8 +105,8 @@ String Similarity finds the degree of similarity between two strings, based on D
 
 ## Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate all pages of this project. This ensures there were no syntax errors. I also used formatters for my HTML, CSS & JS.
-In the results there was a suggestion to use a h2-h6 element in the HTML section. However, I believe it will not add to the design of the website as it would need to be hidden anyway.
+The W3C Markup Validator and W3C CSS Validator Services were used to validate pages of this project. This ensures there were no syntax errors. I also used formatters for my HTML, CSS & JS.
+
 #### Validators
 -   [W3C Markup Validator](https://validator.w3.org/) - [Results](documentation/images/html_valid.png)
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](documentation/images/css_valid.png)
@@ -120,9 +119,9 @@ In the results there was a suggestion to use a h2-h6 element in the HTML section
 
 ### Testing User Journey
 1. Upon entering the site you are presented with the option to choose a category.
-- When clicking a button a category is chosen.
+- When a button is clicked that category is chosen.
 - This correctly prompts the UI, hosts facial expression and hosts speech to change.
-- Start quiz button is displayed.
+- the 'Start Quiz' button is then displayed.
 
 1. Upon clicking a category the host then prompts the user to start the quiz using the 'Start Quiz' button.
 - Upon clicking this button a question is asked.
@@ -131,11 +130,11 @@ In the results there was a suggestion to use a h2-h6 element in the HTML section
 1. This will lead to the host asking his first question. The user can then enter their answer in the form and then submit with the button.
 - When entering text into the form you can either submit with the enter key or by pressing the 'Submit' button.
 - Both methods work as expected.
-- The answer is then checked and appropriate changes to UI, hosts facial expression and hosts speech happen.
+- The answer is then checked and appropriate changes to UI, hosts facial expression and hosts speech occur.
 
-1. They will either be correct or incorrect.
-- If correct: The 'Next Question' appears which serves the same purpose as the 'Start Quiz' Button. Relevent changes to UI, hosts facial expression and hosts speech happen.
-- If incorrect: The popup appears and other cosmetic changes occur as expected. The popup correctly displayed the information and offers the user to option to play again.
+1. The host will then determine whether the user is correct or incorrect.
+- If correct: The 'Next Question' button appears which serves the same purpose as the 'Start Quiz' button. Relevent changes to the UI, hosts facial expression and hosts speech occur.
+- If incorrect: The popup appears and other cosmetic changes occur as expected. The popup correctly displayed the information and offers the user the option to play again.
 - Clicking the play again button reloads the page and starts the process again.
 
 
