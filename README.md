@@ -57,6 +57,7 @@ This is a trivia website using the jService API and string-similarity API Design
 ## Features
 
 - The website should be responsive across different devices.
+- The website allows the user to take a quiz using past "Jeopardy!" questions.
 - The website will be very interactive and lenient towards user error.
 
 ### Taking The Project Further
