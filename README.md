@@ -85,23 +85,23 @@ String Similarity finds the degree of similarity between two strings, based on D
 
 ### Frameworks, Libraries & Programs Used
 
-1. [jService](https://github.com/sottenad/jService)
+1. [jService](https://github.com/sottenad/jService): A trivia API
 
-1. [String-Similarity](https://github.com/aceakash/string-similarity#readme)
+1. [String-Similarity](https://github.com/aceakash/string-similarity#readme): For testing user answer versus correct answer.
 
-1. [Fetch](https://developers.google.com/web/updates/2015/03/introduction-to-fetch)
+1. [Fetch](https://developers.google.com/web/updates/2015/03/introduction-to-fetch): To access the jService API.
 
-1. [Bootstrap4.5.2](https://getbootstrap.com/):
+1. [Bootstrap4.5.2](https://getbootstrap.com/): Basic Styling; (sr-only).
 
-1. [Gitpod](https://www.gitpod.io/): 
+1. [Gitpod](https://www.gitpod.io/): Code is written with Gitpod and used for version control via the terminal to commit to Git and push to GitHub.
 
-1. [Github](https://github.com/):
+1. [Github](https://github.com/): GitHub is used to store the project after being pushed from Git.
 
-1. [Google Fonts](https://fonts.google.com/?query=Oswa):
+1. [Google Fonts](https://fonts.google.com/?query=Oswa): Used to import various fonts.
 
-1. [Font Awesome](https://fontawesome.com/):
+1. [Font Awesome](https://fontawesome.com/): Added icons to popup menu.
 
-1. [Balsamiq](https://balsamiq.com/):
+1. [Balsamiq](https://balsamiq.com/): For wireframes and flowchart.
 
 ## Testing
 
@@ -193,11 +193,11 @@ The project was deployed to GitHub Pages using the following steps:
 
 The space to share any resources I have used to help me build this project.
 
-1. [jService](https://github.com/sottenad/jService) The api I used to get my questions.
+1. [jService](https://github.com/sottenad/jService) The API I used to get my questions.
 
-1. [String-Similarity](https://github.com/aceakash/string-similarity#readme) The api I used to check user answers against the correct answers.
+1. [String-Similarity](https://github.com/aceakash/string-similarity#readme) The API I used to check user answers against the correct answers.
 
-1. [Fetch](https://developers.google.com/web/updates/2015/03/introduction-to-fetch) To access the jService api.
+1. [Fetch](https://developers.google.com/web/updates/2015/03/introduction-to-fetch) To access the jService API.
 
 1. [Button](https://www.w3schools.com/csS/css3_buttons.asp) To get the button press effect.
 
