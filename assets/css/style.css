@@ -73,13 +73,13 @@ header {
 	}
 }
 
-.nav-bar {
+.navBar {
 	width: 100%;
 	display: flex;
 	align-items: center;
 }
 
-.nav-bar h1 {
+.navBar h1 {
 	margin: 0;
 }
 

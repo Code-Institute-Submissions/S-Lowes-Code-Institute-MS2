@@ -11,9 +11,10 @@ This is a trivia website using the jService api and string-similarity api. Desig
     - I would want to attempt the test/quiz in a category of my choice.
 - Returning Visitor
     - As a returning visitor I may simply be looking to improve my score or try a new category.
-    - I may also want to share my results on my social media channels.
+    - I may also want to share my interest in the site via social media.
 - Frequent User
     - As a frequent user I would be consistently be looking to improve my score in the quiz.
+    - I may also be interested in the developent of the game.
 
 ### Design
 
@@ -48,6 +49,15 @@ If I were taking the project further there are some features I believe would ben
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/CSS)
 - [JS](https://en.wikipedia.org/wiki/JavaScript)
+
+### API's Used
+
+## [jService](http://jservice.io/)
+jServie is a simple trivia service that serves the answers/questions pulled from jArchive. The questions are organised into categories which we can use to make a series of themed questions for the user of this website.
+- JSON of a category: [JSON](https://jservice.io/api/category?id=21)
+- JSON of a random question: [JSON](http://jservice.io/api/random)
+## [StringSimilarity](https://www.npmjs.com/package/string-similarity#for-nodejs)
+String Similarity finds the degree of similarity between two strings, based on Dice's Coefficient. Returning a fraction between 0 and 1, which is what indicates the similarity of the strings. We can use this in our website to allow for a users minor spelling mistakes.
 
 ### Frameworks, Libraries & Programs Used
 
@@ -86,15 +96,17 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate al
         1. At this point the user would notice the quiz host who welcomes the user and suggests they choose a category to begin their test.
     - I would want to attempt the test/quiz in a category of my choice.
         1. After a category is chosen the quiz begins and the user can attempt to get as large a score as possible.
-        1. Once the quiz reaches its conclusion the user is prompted to have another ago or share their score.
+        1. Once the quiz reaches its conclusion the user is prompted to have another go or get in touch.
 - Returning Visitor
     - As a returning visitor I may simply be looking to improve my score or try a new category.
         1. This is as easy upon returning as it was the first time.
-    - I may also want to share my results on my social media channels.
-        1. A repeat user may be more inclined to share their score which they get the option to do at the end of the quiz.
+    - I may also want to share my interest in the site via social media.
+        1. A repeat user may be more inclined to share their interest which they get the option to do at the end of the quiz.
 - Frequent User
     - As a frequent user I would be consistently be looking to improve my score in the quiz.
         1. If I took the project further I would include a leaderboard, however at this moment the user would have to remember their own score.
+    - I may also be interested in the developent of the game.
+        1. The user can find a link to the github repository in the header.
 
 ### Further Testing
 
@@ -104,7 +116,11 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate al
 
 ### Known Bugs
 
-### Mentor Feedback
+Users have occured a bug where the question does not appear in the speech bubble after selecting a category or after answering a question.
+- This seems to have only happened on mobile so far.
+- The same users have been unable to repeat the bug.
+
+I currently think it could be an empty element in the category data. However, since the bug has not happened on desktop I have not had a chance to use developer tools to investigate it.
 
 ## Deployment
 
