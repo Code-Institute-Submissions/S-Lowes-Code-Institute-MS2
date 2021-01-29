@@ -97,13 +97,10 @@ header {
 }
 
 
-/*--------SECTION--------*/
+/*--------SECTION - Quiz--------*/
 
 
-/*--------Part1--------*/
-
-
-/* Quiz Background */
+/*--------Part1 - Quiz Background--------*/
 
 .quizBackground {
 	background-image: url("../images/planetHub/shuttleInterior.jpg");
@@ -111,7 +108,7 @@ header {
 	background-repeat: no-repeat;
 	background-size: contain;
 	display: flex;
-	height: 400px;
+	height: 500px;
 	/* <- Will need to change based on screen size */
 }
 
@@ -180,10 +177,8 @@ header {
 }
 
 
-/*--------Part2--------*/
+/*--------Part2 - Quiz Content--------*/
 
-
-/* Quiz Content */
 
 .quizContent {
 	display: block;
@@ -191,7 +186,7 @@ header {
 }
 
 
-/*--------CATEGORY MENU--------*/
+/* Category Menu */
 
 
 /* Button */
@@ -293,4 +288,50 @@ header {
 .socials:hover {
 	color: #829613;
 	text-decoration: none;
+}
+
+/*--------Median Screen Changes--------*/
+
+@media screen and (max-width:1450px){
+    .quizBackground {
+        height: 350px;
+    }
+
+    .quizHost {
+        height: 150px;
+        width: 150px;
+    }    
+}
+
+@media screen and (max-width:900px){
+    .quizBackground {
+        height: 300px;
+    }
+
+    .quizHost {
+        height: 150px;
+        width: 250px;
+    }      
+    
+    .bubble-wrap{
+    margin-right: -10rem;
+    }
+    
+}
+
+@media screen and (max-width:600px){
+    .quizBackground {
+        height: 250px;
+        margin-right: 5rem;
+    }
+
+    .quizHost {
+        height: 100px;
+        width: 100px;
+    }  
+    
+    .bubble-wrap{
+        margin-left: 5rem;
+        margin-right: -10rem;
+    }
 }

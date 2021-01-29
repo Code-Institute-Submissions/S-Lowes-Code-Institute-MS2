@@ -6,9 +6,13 @@ let categoryData = 0;
 let randomQuestionNumber = 0;
 let randomNumberArray = [];
 
-let quizHost = document.querySelector('.quizHost');
-
 const startQuiz = document.getElementById("startQuiz");
+
+// For CSS style adjustments.
+
+let quizHost = document.querySelector('.quizHost');
+let startQ = document.querySelector('#startQuiz');
+let userAnswerSubmission = document.querySelector('.userAnswerSubmission');
 
 // Choose a Category
 /*
@@ -48,8 +52,7 @@ async function category(elem) { // Fetch taken from "https://developers.google.c
     let categoryChoice = document.querySelector('.categoryChoice');
     categoryChoice.style.display = 'none';
 
-    let startQuiz = document.querySelector('#startQuiz');
-    startQuiz.style.display = 'inline-block';
+    startQ.style.display = 'inline-block';
 }
 
 
@@ -62,10 +65,8 @@ We also do another expression change for our quiz host aswell as changing the UI
 */
 startQuiz.addEventListener('click', function() {
 
-    let startQuiz = document.querySelector('#startQuiz');
-    startQuiz.style.display = 'none';
+    startQ.style.display = 'none';
 
-    let userAnswerSubmission = document.querySelector('.userAnswerSubmission');
     userAnswerSubmission.style.display = 'inline-block';
 
     quizHost.style.backgroundImage = 'url("assets/images/quizHost/alien_question1.png")';
@@ -84,7 +85,7 @@ startQuiz.addEventListener('click', function() {
 
     const question = categoryData.clues[randomQuestionNumber].question;
     const answer = categoryData.clues[randomQuestionNumber].answer;
-    
+
     document.getElementById("answer").innerHTML = answer;
     document.getElementById("question").innerHTML = question;
     document.getElementById("hostSpeech").innerHTML = question;
@@ -129,16 +130,13 @@ function checkAnswer() {
 
         quizHost.style.backgroundImage = 'url("assets/images/quizHost/alien_happy3.png")';
 
-        let userAnswerSubmission = document.querySelector('.userAnswerSubmission');
         userAnswerSubmission.style.display = 'none';
 
-        let startQuiz = document.querySelector('#startQuiz');
-        startQuiz.style.display = 'initial';
+        startQ.style.display = 'initial';
         document.getElementById('startQuiz').innerHTML = 'Next Question';
     } else {
         document.getElementById("hostSpeech").innerHTML = "Oh no! Better luck next time. The answer I was looking for was: " + ans;
 
-        let userAnswerSubmission = document.querySelector('.userAnswerSubmission');
         userAnswerSubmission.style.display = 'none';
         let popUp = document.querySelector('.popUp');
         popUp.style.display = 'inline-block';
