@@ -9,14 +9,21 @@ This is a trivia website using the jService api and string-similarity api. Desig
 ### User Journey
 
 1. The user begins at the Homepage and should see the simple instructions "Hello, human surveillance bot. To begin the tests, please choose a category. " which are presented by our alien host.
+
 <p align="center"><img height="200px" src="documentation/images/readme_homepage.png"></p>
+
 1. Upon clicking a category the host then prompts the user to start the quiz using the 'Start Quiz' button.
 1. This will lead to the host asking his first question. The user can then enter their answer in the form and then submit with the button.
+
 <p align="center"><img height="200px" src="documentation/images/readme_submit.png"></p>
+
 1. They will either be correct or incorrect.
  - If correct, The user will have be allowed to continue to the next question & the quiz will continue. 
+
  <p align="center"><img height="200px" src="documentation/images/readme_correct.png"></p>
+
  - If incorrect, then unfortunately the users run is over. A popup appears giving feedback of the users score and category chosen and prompts them to play again.
+
  <p align="center"><img height="200px" src="documentation/images/readme_incorrect.png"></p>
 
 ### User Stories
@@ -110,6 +117,27 @@ In the results there was a suggestion to use a h2-h6 element in the HTML section
 - [HTML Formatter](https://www.freeformatter.com/html-formatter.html)
 - [CSS Formatter](https://www.freeformatter.com/css-beautifier.html)
 - [JS Formatter](https://beautifier.io/)
+
+### Testing User Journey
+1. Upon entering the site you are presented with the option to choose a category.
+- When clicking a button a category is chosen.
+- This correctly prompts the UI, hosts facial expression and hosts speech to change.
+- Start quiz button is displayed.
+
+1. Upon clicking a category the host then prompts the user to start the quiz using the 'Start Quiz' button.
+- Upon clicking this button a question is asked.
+- Much like the category choice buttons this also prompts the UI, hosts facial expression and hosts speech to change.
+
+1. This will lead to the host asking his first question. The user can then enter their answer in the form and then submit with the button.
+- When entering text into the form you can either submit with the enter key or by pressing the 'Submit' button.
+- Both methods work as expected.
+- The answer is then checked and appropriate changes to UI, hosts facial expression and hosts speech happen.
+
+1. They will either be correct or incorrect.
+- If correct: The 'Next Question' appears which serves the same purpose as the 'Start Quiz' Button. Relevent changes to UI, hosts facial expression and hosts speech happen.
+- If incorrect: The popup appears and other cosmetic changes occur as expected. The popup correctly displayed the information and offers the user to option to play again.
+- Clicking the play again button reloads the page and starts the process again.
+
 
 ### Testing User Stories
 
