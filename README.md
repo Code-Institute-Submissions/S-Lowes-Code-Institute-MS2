@@ -1,6 +1,6 @@
 <h1 align="center">MS2</h1>
 
-This is a trivia website using the jService api and string-similarity api. Designed to be eye-catching, responsive & interactive.
+This is a trivia website using the jService API and string-similarity API Designed to be eye-catching, interactive & fun.
 
 ![Multi-Device MockUp](documentation/images/multidevicedisplay.png)
 
@@ -8,23 +8,23 @@ This is a trivia website using the jService api and string-similarity api. Desig
 
 ### User Journey
 
-1. The user begins at the Homepage and should see the simple instructions "Hello, human surveillance bot. To begin the tests, please choose a category. " which are presented by our alien host.
+1. The user begins at the Homepage and should see the simple instructions "Hello, human surveillance bot. To begin the tests, please choose a category. " Which are presented by our alien host.
 
-<p align="center"><img height="200px" src="documentation/images/readme_homepage.png"></p>
+<p align="center"><img width="400px" src="documentation/images/readme_homepage.png"></p>
 
 1. Upon clicking a category the host then prompts the user to start the quiz using the 'Start Quiz' button.
 1. This will cause the host to ask his first question. The user can then enter their answer into the form and submit with the 'Submit' button.
 
-<p align="center"><img height="200px" src="documentation/images/readme_submit.png"></p>
+<p align="center"><img width="400px" src="documentation/images/readme_submit.png"></p>
 
 1. The host will then determine whether the user is correct or incorrect.
  - If correct, The user will be allowed to continue to the next question and the quiz will continue. 
 
- <p align="center"><img height="200px" src="documentation/images/readme_correct.png"></p>
+ <p align="center"><img width="400px" src="documentation/images/readme_correct.png"></p>
 
  - If incorrect, then unfortunately the users run is over. A popup appears giving feedback to the user and prompts them to play again.
 
- <p align="center"><img height="200px" src="documentation/images/readme_incorrect.png"></p>
+ <p align="center"><img width="400px" src="documentation/images/readme_incorrect.png"></p>
 
 ### User Stories
 
@@ -36,16 +36,16 @@ This is a trivia website using the jService api and string-similarity api. Desig
     - I may also want to share my interest in the site via social media.
 - Frequent User
     - As a frequent user I would consistently be looking to improve my score.
-    - I may also be interested in the developent of the game.
+    - I may also be interested in the development of the game.
 
 ### Design
 
 - Colour Scheme
-    - This will likely be dictated by the creative elements that I find. So with that in mind I chose a background color that would blend with the central image. Any buttons and text I will try to use colors from the image so that we have a constistent theme.
+    - This will likely be dictated by the creative elements that I find. So with that in mind I chose a background color that would blend with the central image. Any buttons and text I will try to use colors from the image so that we have a consistent theme.
 - Typography
     - I used Yusei Magic for the header and Oswald elsewhere.
 - Imagery
-    - I found a selection of emoji expressions that I thought would work well at different moments during a playthrough (correct/incorrect etc.). These emojis happened to be of an alien so I decided to theme my website around space.
+    - I found a selection of emoji expressions that I thought would work well at different moments during a play through (correct/incorrect etc.). These emojis happened to be of an alien, so I decided to theme my website around space.
 
 - Wireframes
     - I created wireframes for the basic ideas I had and then added more details as I went along. I also made a flowchart to help me envision the steps taken during a playthrough of the quiz.
@@ -62,7 +62,7 @@ This is a trivia website using the jService api and string-similarity api. Desig
 ### Taking The Project Further
 
 If I were taking the project further there are some features I believe would the website would benefit from:
-- I would like the website to record the users previous attempts so they can see their own improvement.
+- I would like the website to record the users previous attempts so that they can see their own improvement.
 - Although the social media icons do lead to their respective websites, I would like a more complete share system that writes a post for the user.
 
 ## Technologies
@@ -133,7 +133,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate pa
 - The answer is then checked and appropriate changes to UI, hosts facial expression and hosts speech occur.
 
 1. The host will then determine whether the user is correct or incorrect.
-- If correct: The 'Next Question' button appears which serves the same purpose as the 'Start Quiz' button. Relevent changes to the UI, hosts facial expression and hosts speech occur.
+- If correct: The 'Next Question' button appears which serves the same purpose as the 'Start Quiz' button. Relevant changes to the UI, hosts facial expression and hosts speech occur.
 - If incorrect: The popup appears and other cosmetic changes occur as expected. The popup correctly displayed the information and offers the user the option to play again.
 - Clicking the play again button reloads the page and starts the process again.
 
@@ -166,7 +166,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate pa
 
 ### Known Bugs
 
-Users have occured a bug where the question does not appear in the speech bubble after selecting a category or after answering a question.
+Users have occurred a bug where the question does not appear in the speech bubble after selecting a category or after answering a question.
 - This seems to have only happened on mobile so far.
 - The same users have been unable to repeat the bug.
 
