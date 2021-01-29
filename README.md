@@ -2,7 +2,11 @@
 
 This is a trivia website using the jService api and string-similarity api. Designed to be eye-catching, responsive & interactive.
 
+![Multi-Device MockUp](documentation/images/multidevicedisplay.png)
+
 ## User Experience
+
+### User Journey
 
 ### User Stories
 
@@ -28,8 +32,10 @@ This is a trivia website using the jService api and string-similarity api. Desig
 
 - Wireframes
     - I created wireframes for the basic ideas I had and then added more details as I went along. I also made a flowchart to help me envision the steps taken during a playthrough of the quiz.
-        - [Quiz Page]() Empty
-        - [Flowchart]() Empty
+        - [Home page](/workspace/Code-Institute-MS2/documentation/Wireframe/MS2-Wireframe-Homepage.pdf)
+        - [Question Page](/workspace/Code-Institute-MS2/documentation/Wireframe/MS2-Wireframe-Question.pdf)
+        - [Recap Page](/workspace/Code-Institute-MS2/documentation/Wireframe/MS2-Wireframe-Recap.pdf)
+        - [Flowchart](/workspace/Code-Institute-MS2/documentation/Wireframe/MS2-Wireframe-Flowchart.pdf)
 
 ## Features
 
@@ -50,7 +56,7 @@ If I were taking the project further there are some features I believe would ben
 - [CSS3](https://en.wikipedia.org/wiki/CSS)
 - [JS](https://en.wikipedia.org/wiki/JavaScript)
 
-### API's Used
+## API's Used
 
 ## [jService](http://jservice.io/)
 jServie is a simple trivia service that serves the answers/questions pulled from jArchive. The questions are organised into categories which we can use to make a series of themed questions for the user of this website.
@@ -81,12 +87,17 @@ String Similarity finds the degree of similarity between two strings, based on D
 
 ## Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate all pages of this project. This ensures there were no syntax errors in the project.
+The W3C Markup Validator and W3C CSS Validator Services were used to validate all pages of this project. This ensures there were no syntax errors. I also used formatters for my HTML, CSS & JS.
 
+#### Validators
+-   [W3C Markup Validator](https://validator.w3.org/) - [Results](/workspace/Code-Institute-MS2/documentation/images/html_valid.png)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](/workspace/Code-Institute-MS2/documentation/images/css_valid.png)
 
--   [W3C Markup Validator](https://validator.w3.org/) - [Results]() Empty
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results]() Empty
--   [JS Validator](https://validatejavascript.com/) - [Results]() Empty
+#### Formatters
+
+- [HTML Formatter](https://www.freeformatter.com/html-formatter.html)
+- [CSS Formatter](https://www.freeformatter.com/css-beautifier.html)
+- [JS Formatter](https://beautifier.io/)
 
 ### Testing User Stories
 
