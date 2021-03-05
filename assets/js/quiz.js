@@ -146,8 +146,14 @@ function checkAnswer() {
     popUp.style.display = 'inline-block';
     popUp.querySelector('.popUpCategory').innerHTML = 'You chose the ' + title +
       ' category';
-    popUp.querySelector('.popUpScore').innerHTML = 'You got ' + score +
-      ' questions correct!';
+      
+      if (score == 1) {
+          popUp.querySelector('.popUpScore').innerHTML = 'You got ' + score +
+              ' question correct!';
+      } else {
+          popUp.querySelector('.popUpScore').innerHTML = 'You got ' + score +
+              ' questions correct!';
+      }
 
     quizHost.style.backgroundImage =
       'url("assets/images/quizHost/alien_sad1.png")';
