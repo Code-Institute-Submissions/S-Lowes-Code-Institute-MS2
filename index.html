@@ -53,8 +53,8 @@
             <form id="answerForm">
               <!--credit Scott for help with js bug-->
               <label for="userAnswer">Write Your answer Here: </label>
-              <input type="text" id="userAnswer" name="userAnswer" autocomplete="off">
-              <input id="submitButton" class="quizButtons" type="button" value="Submit" onclick="checkAnswer();" >
+              <input type="text" id="userAnswer" name="userAnswer" autocomplete="off" required>
+              <input id="submitButton" class="quizButtons" type="submit" value="Submit" onsubmit="checkAnswer();">
             </form>
           </div>
           <!-- The popUp results -->
