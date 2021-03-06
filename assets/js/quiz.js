@@ -75,9 +75,21 @@ startQuiz.addEventListener('click', function() {
   const numberOfQuestions = categoryData.clues_count;
   min = Math.ceil(0);
   max = Math.floor(numberOfQuestions);
-  randomQuestionNumber = Math.floor(Math.random() * (max - min + 1) + min);
+  randomQuestionNumber = 29
+  //Math.floor(Math.random() * (max - min + 1) + min);
 
-  while (randomNumberArray.includes(randomQuestionNumber)) {
+  function invalid_question(rq){
+      q_temp=categoryData.clues[rq].question.split(" ").join("")
+      a_temp=categoryData.clues[rq].answer.split(" ").join("")
+      
+      q_valid = (Boolean(q_temp) == false)
+      a_valid = (Boolean(a_temp) == false)
+      n_valid = randomNumberArray.includes(rq)
+      valid = n_valid || q_valid || a_valid
+      return(valid)
+  }
+
+  while(invalid_question(randomQuestionNumber)) {
     randomQuestionNumber = Math.floor(Math.random() * (max - min + 1) +
     min);
   }
