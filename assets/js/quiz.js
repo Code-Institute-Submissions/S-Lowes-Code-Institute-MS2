@@ -1,7 +1,6 @@
 // quiz.js
 // Create variables
 let score = 0;
-let cat = 0;
 let categoryData = 0;
 let randomQuestionNumber = 0;
 let randomNumberArray = [];
@@ -73,23 +72,25 @@ startQuiz.addEventListener('click', function() {
 
 
   const numberOfQuestions = categoryData.clues_count;
+  var min;
+  var max;
   min = Math.ceil(0);
   max = Math.floor(numberOfQuestions);
-  randomQuestionNumber = 29
+  randomQuestionNumber = 29;
   //Math.floor(Math.random() * (max - min + 1) + min);
 
-  function invalid_question(rq){
-      q_temp=categoryData.clues[rq].question.split(" ").join("")
-      a_temp=categoryData.clues[rq].answer.split(" ").join("")
-      
-      q_valid = (Boolean(q_temp) == false)
-      a_valid = (Boolean(a_temp) == false)
-      n_valid = randomNumberArray.includes(rq)
-      valid = n_valid || q_valid || a_valid
-      return(valid)
+  function invalidQuestion(rq){
+      let q_temp=categoryData.clues[rq].question.split(" ").join("");
+      let a_temp=categoryData.clues[rq].answer.split(" ").join("");
+
+      let q_valid = (Boolean(q_temp) == false);
+      let a_valid = (Boolean(a_temp) == false);
+      let n_valid = randomNumberArray.includes(rq);
+      let valid = n_valid || q_valid || a_valid;
+      return(valid);
   }
 
-  while(invalid_question(randomQuestionNumber)) {
+  while(invalidQuestion(randomQuestionNumber)) {
     randomQuestionNumber = Math.floor(Math.random() * (max - min + 1) +
     min);
   }
@@ -118,7 +119,7 @@ input.addEventListener("keyup", function(event) {
 document.getElementById('answerForm').onsubmit = function(e) {
   e.preventDefault();
   checkAnswer();
-}
+};
 
 // Checking the Answer
 /*
@@ -131,14 +132,14 @@ In this function we also ensure the strings passed to the api are lowercase.
 function checkAnswer() {
   const title = categoryData.title;
 
-  let ans = document.getElementById("answer").innerHTML
-  let userAns = document.getElementById("userAnswer").value
+  let ans = document.getElementById("answer").innerHTML;
+  let userAns = document.getElementById("userAnswer").value;
 
   let ansLower = ans.toLowerCase();
   let userAnsLower = userAns.toLowerCase();
-
+  
   if (stringSimilarity.compareTwoStrings(ansLower, userAnsLower) >= 0.6) {
-    score++
+    score++;
     document.getElementById("hostSpeech").innerHTML =
       "Well Done! You got it correct.";
 
