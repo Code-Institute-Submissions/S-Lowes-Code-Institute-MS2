@@ -300,7 +300,11 @@ header {
     .quizHost {
         height: 150px;
         width: 150px;
-    }    
+    }   
+
+    .bubble {
+        padding: 5px;
+    }
 }
 
 @media screen and (max-width:900px){
@@ -317,6 +321,9 @@ header {
     margin-right: -10rem;
     }
     
+    .bubble {
+        padding: 5px;
+    }
 }
 
 @media screen and (max-width:600px){
@@ -333,5 +340,9 @@ header {
     .bubble-wrap{
         margin-left: 5rem;
         margin-right: -10rem;
+    }
+
+    .bubble {
+        padding: 5px;
     }
 }

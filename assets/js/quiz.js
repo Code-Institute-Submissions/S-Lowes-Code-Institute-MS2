@@ -76,8 +76,20 @@ startQuiz.addEventListener('click', function() {
   var max;
   min = Math.ceil(0);
   max = Math.floor(numberOfQuestions);
-  randomQuestionNumber = 29;
-  //Math.floor(Math.random() * (max - min + 1) + min);
+  randomQuestionNumber = Math.floor(Math.random() * (max - min + 1) + min);
+
+  function screenWidthProtection() {
+      sW = screen.width
+      if (sW <= 600) {
+          // string length 180 min (tested on sW 360)
+      } else if (sW <= 900){
+
+      } else if (sW <= 1450){
+
+      } else{
+
+      }
+  }
 
   function invalidQuestion(rq){
       let q_temp=categoryData.clues[rq].question.split(" ").join("");

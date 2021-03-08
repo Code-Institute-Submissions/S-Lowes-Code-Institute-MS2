@@ -5,7 +5,6 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Read Into This-->
     <title>Trivia Quiz</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/ea9185fe23.js" crossorigin="anonymous"></script>
@@ -26,10 +25,11 @@
       <div class="quiz">
         <div class="quizBackground">
           <div class="quizHost">
-            <!--Quiz host image used a background for div-->
+            <!--Quiz host image used as a background for div-->
             <div class="bubble-wrap">
               <div class="bubble left" id="hostSpeech">
-                Hello, human surveillance bot. To begin the tests, please choose a category.
+                Hello, human surveillance bot. To begin a test, please choose a category.<br>
+                <br>If you wish to restart for any reason, click my confused friend at the top of the page.
               </div>
             </div>
           </div>
@@ -77,6 +77,5 @@
     <!--Scripts-->
     <script src="assets/js/quiz.js"></script>
     <script src="//unpkg.com/string-similarity/umd/string-similarity.min.js"></script> <!--https://www.npmjs.com/package/string-similarity#comparetwostringsstring1-string2-->
-    <!--<script>console.log(stringSimilarity.compareTwoStrings('what!', 'who?'));</script>-->
   </body>
 </html>
