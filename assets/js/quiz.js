@@ -81,13 +81,13 @@ startQuiz.addEventListener('click', function() {
   function screenWidthProtection() {
       sW = screen.width
       if (sW <= 600) {
-          // string length 180 min (tested on sW 360)
+          return(categoryData.clues[randomQuestionNumber].question.length > 180)
       } else if (sW <= 900){
-
+          return(categoryData.clues[randomQuestionNumber].question.length > 300)
       } else if (sW <= 1450){
-
+          return(categoryData.clues[randomQuestionNumber].question.length > 230)
       } else{
-
+          return(false)
       }
   }
 
@@ -102,7 +102,7 @@ startQuiz.addEventListener('click', function() {
       return(valid);
   }
 
-  while(invalidQuestion(randomQuestionNumber)) {
+  while(invalidQuestion(randomQuestionNumber) || screenWidthProtection()) {
     randomQuestionNumber = Math.floor(Math.random() * (max - min + 1) +
     min);
   }
