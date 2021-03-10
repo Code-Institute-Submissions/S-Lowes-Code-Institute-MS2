@@ -210,6 +210,8 @@ The space to share any resources I have used to help me build this project.
 
 1. [Bootstrap4.5.2](https://getbootstrap.com/): Bootstrap Library used for some basic styling.
 
+1. [Favicon](https://www.favicon.cc/?): To create favicon.
+
 1. [Multi Media Mockup](https://techsini.com/multi-mockup/): For the README.
 
 ### Acknowledgements

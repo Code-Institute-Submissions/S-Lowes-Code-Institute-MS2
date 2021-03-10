@@ -133,7 +133,7 @@ header {
 .bubble-wrap {
 	width: 300px;
 	margin: auto;
-	margin-left: 200px;
+	margin-left: 150px;
 	margin-right: -200px;
 	color: #23232b;
 }
@@ -314,12 +314,8 @@ header {
 
     .quizHost {
         height: 150px;
-        width: 250px;
+        width: 150px;
     }      
-    
-    .bubble-wrap{
-    margin-right: -10rem;
-    }
     
     .bubble {
         padding: 10px;

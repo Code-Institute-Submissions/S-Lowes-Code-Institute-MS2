@@ -78,20 +78,18 @@ startQuiz.addEventListener('click', function() {
   max = Math.floor(numberOfQuestions);
   randomQuestionNumber = Math.floor(Math.random() * (max - min + 1) + min);
 
-  function screenWidthProtection() {
+  function isQuizProtected() {
       sW = screen.width
       if (sW <= 600) {
-          return(categoryData.clues[randomQuestionNumber].question.length > 180)
-      } else if (sW <= 900){
-          return(categoryData.clues[randomQuestionNumber].question.length > 300)
-      } else if (sW <= 1450){
-          return(categoryData.clues[randomQuestionNumber].question.length > 230)
+          return(categoryData.clues[randomQuestionNumber].question.length > 200)
+      } else if (sW <= 900 || sW <= 1450){
+          return(categoryData.clues[randomQuestionNumber].question.length > 280)
       } else{
-          return(false)
+          return(categoryData.clues[randomQuestionNumber].question.length > 440)
       }
   }
 
-  function invalidQuestion(rq){
+  function isQuestionValid(rq){
       let q_temp=categoryData.clues[rq].question.split(" ").join("");
       let a_temp=categoryData.clues[rq].answer.split(" ").join("");
 
@@ -102,7 +100,7 @@ startQuiz.addEventListener('click', function() {
       return(valid);
   }
 
-  while(invalidQuestion(randomQuestionNumber) || screenWidthProtection()) {
+  while(isQuestionValid(randomQuestionNumber) || isQuizProtected()) {
     randomQuestionNumber = Math.floor(Math.random() * (max - min + 1) +
     min);
   }
