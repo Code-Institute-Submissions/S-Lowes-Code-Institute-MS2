@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivia Quiz</title>
+    <title>Extra Trivia</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/ea9185fe23.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
@@ -38,12 +38,12 @@
         <div class="quizContent">
           <!-- Choose a Category -->
           <div class="categoryChoice">
-            <button id="21" class="quizButtons" onclick="category(this)">Animals</button> <!-- 21: http://jservice.io/api/category?id=21 -->
-            <button id="114" class="quizButtons" onclick="category(this)">History</button> <!-- 114: http://jservice.io/api/category?id=114 -->
-            <button id="680" class="quizButtons" onclick="category(this)">Mythology</button> <!-- 680: http://jservice.io/api/category?id=680 -->
-            <button id="25" class="quizButtons" onclick="category(this)">Science</button> <!-- 25: http://jservice.io/api/category?id=21 -->
-            <button id="42" class="quizButtons" onclick="category(this)">Sports</button> <!-- 42: http://jservice.io/api/category?id=42 -->
-            <button id="227" class="quizButtons" onclick="category(this)">Hodgepodge</button> <!-- 227: http://jservice.io/api/category?id=227 -->
+            <button id="21" class="quizButtons" onclick="fetchCategory(this)">Animals</button> <!-- 21: http://jservice.io/api/category?id=21 -->
+            <button id="114" class="quizButtons" onclick="fetchCategory(this)">History</button> <!-- 114: http://jservice.io/api/category?id=114 -->
+            <button id="680" class="quizButtons" onclick="fetchCategory(this)">Mythology</button> <!-- 680: http://jservice.io/api/category?id=680 -->
+            <button id="25" class="quizButtons" onclick="fetchCategory(this)">Science</button> <!-- 25: http://jservice.io/api/category?id=21 -->
+            <button id="42" class="quizButtons" onclick="fetchCategory(this)">Sports</button> <!-- 42: http://jservice.io/api/category?id=42 -->
+            <button id="227" class="quizButtons" onclick="fetchCategory(this)">Hodgepodge</button> <!-- 227: http://jservice.io/api/category?id=227 -->
           </div>
           <!-- The Question & Answer + startQuiz/NextQuestion button-->
           <button id="startQuiz" class="quizButtons">Start Quiz</button>

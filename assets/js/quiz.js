@@ -13,6 +13,7 @@ let quizHost = document.querySelector('.quizHost');
 let startQ = document.querySelector('#startQuiz');
 let userAnswerSubmission = document.querySelector('.userAnswerSubmission');
 
+
 // Choose a Category
 /*
 Using the id taken from the clicked button we can grab the required category from jService using fetch.
@@ -20,26 +21,18 @@ The function will 'await' the completion of the fetch command before presenting 
 We also change the facial expression of the quiz host.
 */
 // Fetch taken from "https://developers.google.com/web/updates/2015/03/introduction-to-fetch"
-async function category(elem) {
+async function fetchCategory(elem) {
 
   let cat = (elem.id);
 
-  await fetch('https://jservice.io/api/category?id=' + cat)
-    .then(
-      function(response) {
-        if (response.status !== 200) {
-          alert('Oh no! Looks like there was an error.');
-          return;
-        }
+  try {
+    const response = await fetch('https://jservice.io/api/category?id=' + cat);
+    categoryData = await response.json();
+  }
+  catch (err) {
+    console.log('fetch failed', err);
+  }
 
-        response.json().then(function(data) {
-          categoryData = data;
-        });
-      }
-    )
-    .catch(function(err) {
-      alert('Oh dear! Seems we had a problem finding the category.', err);
-    });
 
   document.getElementById("hostSpeech").innerHTML =
     "When ready, press the button & I'll ask you a question";
@@ -51,6 +44,7 @@ async function category(elem) {
   categoryChoice.style.display = 'none';
 
   startQ.style.display = 'inline-block';
+  return categoryData;
 }
 
 
@@ -59,7 +53,9 @@ async function category(elem) {
 Grabbing a RANDOM Question using a random number.
 Create random number & check it is unused - We don't want repeat questions.
 Unused numbers are pushed to the array which we check our new random numbers against.
-We also do another expression change for our quiz host aswell as changing the UI.
+Included at the isQuizProtected() & isQuestionValid() functions.
+isQuizProtected: Checks question length does not disrupt the UI
+isQuestionValid: Checks to make sure the question & answer are not falsy.
 */
 startQuiz.addEventListener('click', function() {
 
@@ -115,6 +111,7 @@ startQuiz.addEventListener('click', function() {
   document.getElementById("hostSpeech").innerHTML = question;
 });
 
+
 //Using enter key to submit answer on form & suppress default event
 
 let input = document.getElementById("userAnswer");
@@ -130,6 +127,7 @@ document.getElementById('answerForm').onsubmit = function(e) {
   e.preventDefault();
   checkAnswer();
 };
+
 
 // Checking the Answer
 /*
@@ -194,3 +192,26 @@ function reloadGame() {
 let restartGame = function restartGame() {
   reloadGame();
 };
+
+
+//Store Code Temp
+/*
+
+await fetch('https://jservice.io/api/category?id=' + cat)
+    .then(
+      function(response) {
+        if (!response.ok) {
+          alert('Oh no! Looks like there was an error.');
+          return;
+        }
+
+        response.json().then(function(data) {
+          categoryData = data;
+        });
+      }
+    )
+    .catch(function(err) {
+      alert('Oh dear! Seems we had a problem finding the category.', err);
+    });
+
+*/
