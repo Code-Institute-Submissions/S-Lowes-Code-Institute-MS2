@@ -108,7 +108,7 @@ String Similarity finds the degree of similarity between two strings, based on D
 ## Testing 
 Testing information can be found here: [TESTING](TESTING.md)
 
-## Deployment
+## Deployment & Cloning
 
 ### Github Pages
 
@@ -122,6 +122,18 @@ The project was deployed to GitHub Pages using the following steps:
 - The page will automatically refresh.
 - Scroll back down through the page to locate the now published site link in the "GitHub Pages" section.
 
+### Cloning
+
+How to clone this repository in Github to Gitpod:
+
+- Go to [GitHub.com](https://github.com/)
+- Log in to GitHub and locate the GitHub Repository.
+- Click on ‘MS2’
+- Click on the green button ‘Clone or download’
+- Click on the icon that looks like a clipboard on the right side of the URL (this copies URL link)
+- Open repo or create new repo
+- Open terminal
+- Type `git clone` and paste URL link and press enter.
 
 ## Credits
 

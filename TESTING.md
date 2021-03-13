@@ -1,6 +1,6 @@
 # Testing
 
-The W3C Markup Validator, W3C CSS Validator and JSHint Services were used to validate pages of this project. This ensures there were no syntax errors. I also used formatters for my HTML, CSS & JS.
+The W3C Markup Validator, W3C CSS Validator and JSHint Services were used to validate the pages of this project. This ensures there were no syntax errors. I also used formatters for my HTML, CSS & JS.
 
 #### Validators
 -   [W3C Markup Validator](https://validator.w3.org/) - [Results](documentation/images/html_valid.png)
@@ -58,7 +58,6 @@ The W3C Markup Validator, W3C CSS Validator and JSHint Services were used to val
 
 ### Desktop
 
-In desktop mode:
 1. The UI is clear and concise.
     - User can clearly see all the elements of the page.
     - The padding of the speech bubble changes for smaller monitors.
@@ -72,7 +71,6 @@ In desktop mode:
 
 ### iPad/iPad Pro
 
-In iPad/iPad Pro mode:
 1. The UI is clear and concise.
     - User can clearly see all the elements of the page.
 1. Quiz functions as intended.
@@ -88,7 +86,6 @@ In iPad/iPad Pro mode:
 
 ### Mobile 
 
-In Mobile mode:
 1. The UI is clear and concise.
     - User can clearly see all the elements of the page.
 1. Quiz functions as intended.
