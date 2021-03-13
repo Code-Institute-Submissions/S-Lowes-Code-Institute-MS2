@@ -1,4 +1,4 @@
-<h1 align="center">MS2</h1>
+# MS2
 
 This is a trivia website using the jService API and string-similarity API Designed to be eye-catching, interactive & fun.
 
@@ -10,21 +10,21 @@ This is a trivia website using the jService API and string-similarity API Design
 
 1. The user begins at the Homepage and should see the simple instructions "Hello, human surveillance bot. To begin the tests, please choose a category. " Which are presented by our alien host.
 
-<p align="center"><img width="400px" src="documentation/images/readme_homepage.png"></p>
+![Homepage](documentation/images/readme_homepage.png)
 
 1. Upon clicking a category the host then prompts the user to start the quiz using the 'Start Quiz' button.
 1. This will cause the host to ask his first question. The user can then enter their answer into the form and submit with the 'Submit' button.
 
-<p align="center"><img width="400px" src="documentation/images/readme_submit.png"></p>
+![Submit Page](documentation/images/readme_submit.png)
 
 1. The host will then determine whether the user is correct or incorrect.
  - If correct, The user will be allowed to continue to the next question and the quiz will continue. 
 
- <p align="center"><img width="400px" src="documentation/images/readme_correct.png"></p>
+![Correct Page](documentation/images/readme_correct.png)
 
  - If incorrect, then unfortunately the users run is over. A popup appears giving feedback to the user and prompts them to play again.
 
- <p align="center"><img width="400px" src="documentation/images/readme_incorrect.png"></p>
+![Incorrect Page](documentation/images/readme_incorrect.png)
 
 ### User Stories
 
@@ -103,6 +103,10 @@ String Similarity finds the degree of similarity between two strings, based on D
 1. [Font Awesome](https://fontawesome.com/): Added icons to popup menu.
 
 1. [Balsamiq](https://balsamiq.com/): For wireframes and flowchart.
+
+
+## Testing 
+Testing information can be found here: [TESTING](TESTING.md)
 
 ## Deployment
 

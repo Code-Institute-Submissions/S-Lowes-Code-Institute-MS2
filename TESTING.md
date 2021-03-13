@@ -1,6 +1,6 @@
-## Testing
+# Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate pages of this project. This ensures there were no syntax errors. I also used formatters for my HTML, CSS & JS.
+The W3C Markup Validator, W3C CSS Validator and JSHint Services were used to validate pages of this project. This ensures there were no syntax errors. I also used formatters for my HTML, CSS & JS.
 
 #### Validators
 -   [W3C Markup Validator](https://validator.w3.org/) - [Results](documentation/images/html_valid.png)
