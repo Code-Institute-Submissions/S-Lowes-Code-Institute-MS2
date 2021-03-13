@@ -135,6 +135,8 @@ The space to share any resources I have used to help me build this project.
 
 1. [Fetch](https://developers.google.com/web/updates/2015/03/introduction-to-fetch) To access the jService API.
 
+1. [Async](https://developers.google.com/web/fundamentals/primers/async-functions) To ensure quiz questions are loaded before any other actions can be taken.
+
 1. [Button](https://www.w3schools.com/csS/css3_buttons.asp) To get the button press effect.
 
 1. [Pixabay](https://pixabay.com/) Used for quiz host images.
