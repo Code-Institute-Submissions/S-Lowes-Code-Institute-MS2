@@ -1,36 +1,36 @@
-// quiz.js
-// Create variables
-let score = 0;
-let categoryData = 0;
-let randomQuestionNumber = 0;
-let randomNumberArray = [];
 
-const startQuiz = document.getElementById("startQuiz");
+// Declare variables.
+let score = 0,
+  categoryData = 0,
+  randomQuestionNumber = 0,
+  randomNumberArray = [];
 
 // For CSS style adjustments.
+let quizHost = document.querySelector('.quizHost'),
+  startQ = document.querySelector('#startQuiz'),
+  userAnswerSubmission = document.querySelector('.userAnswerSubmission');
 
-let quizHost = document.querySelector('.quizHost');
-let startQ = document.querySelector('#startQuiz');
-let userAnswerSubmission = document.querySelector('.userAnswerSubmission');
+// For start quiz event listener.
+const startQuiz = document.getElementById("startQuiz");
 
 
 // Choose a Category
 /*
-Using the id taken from the clicked button we can grab the required category from jService using fetch.
-The function will 'await' the completion of the fetch command before presenting the button that starts the quiz (UI change).
-We also change the facial expression of the quiz host.
+The function will fetch the chosen cateory from jService API.
+It will also adjust some CSS to change the UI.
 */
-// Fetch taken from "https://developers.google.com/web/updates/2015/03/introduction-to-fetch"
+// fetch taken from "https://developers.google.com/web/updates/2015/03/introduction-to-fetch"
+// async taken from "https://developers.google.com/web/fundamentals/primers/async-functions"
 async function fetchCategory(elem) {
 
   let cat = (elem.id);
 
   try {
-    const response = await fetch('https://jservice.io/api/category?id=' + cat);
+    const response = await fetch('https://jservice.io/api/category?id=' +
+      cat);
     categoryData = await response.json();
-  }
-  catch (err) {
-    console.log('fetch failed', err);
+  } catch (err) {
+    alert('Oh dear! Seems we had a problem finding the category.', err);
   }
 
 
@@ -50,12 +50,11 @@ async function fetchCategory(elem) {
 
 //Start The Quiz/Next Question
 /*
-Grabbing a RANDOM Question using a random number.
-Create random number & check it is unused - We don't want repeat questions.
-Unused numbers are pushed to the array which we check our new random numbers against.
-Included at the isQuizProtected() & isQuestionValid() functions.
-isQuizProtected: Checks question length does not disrupt the UI
-isQuestionValid: Checks to make sure the question & answer are not falsy.
+The function will Grab a random question using a random number.
+Used question numbers are stored in an array.
+More adjustments to CSS are made to change the UI.
+
+Inside the eventlistener are functions isQuizDisrupted & isQuestionInvalid.
 */
 startQuiz.addEventListener('click', function() {
 
@@ -74,31 +73,39 @@ startQuiz.addEventListener('click', function() {
   max = Math.floor(numberOfQuestions);
   randomQuestionNumber = Math.floor(Math.random() * (max - min + 1) + min);
 
-  function isQuizProtected() {
-      sW = screen.width
-      if (sW <= 600) {
-          return(categoryData.clues[randomQuestionNumber].question.length > 200)
-      } else if (sW <= 900 || sW <= 1450){
-          return(categoryData.clues[randomQuestionNumber].question.length > 280)
-      } else{
-          return(categoryData.clues[randomQuestionNumber].question.length > 440)
-      }
+
+  // isQuizDisrupted: Checks question length does not disrupt the UI.
+  function isQuizDisrupted() {
+    let sW = screen.width;
+    if (sW <= 600) {
+      return (categoryData.clues[randomQuestionNumber].question.length >
+        200);
+    } else if (sW <= 900 || sW <= 1450) {
+      return (categoryData.clues[randomQuestionNumber].question.length >
+        280);
+    } else {
+      return (categoryData.clues[randomQuestionNumber].question.length >
+        440);
+    }
   }
 
-  function isQuestionValid(rq){
-      let q_temp=categoryData.clues[rq].question.split(" ").join("");
-      let a_temp=categoryData.clues[rq].answer.split(" ").join("");
 
-      let q_valid = (Boolean(q_temp) == false);
-      let a_valid = (Boolean(a_temp) == false);
-      let n_valid = randomNumberArray.includes(rq);
-      let valid = n_valid || q_valid || a_valid;
-      return(valid);
+  //isQuestionInvalid: Checks question & answer are unused and are not falsy.
+  function isQuestionInvalid(rqn) {
+    let qTemp = categoryData.clues[rqn].question.split(" ").join(""),
+      aTemp = categoryData.clues[rqn].answer.split(" ").join("");
+
+    let qValid = (Boolean(qTemp) == false),
+      aValid = (Boolean(aTemp) == false),
+      nValid = randomNumberArray.includes(rqn);
+
+    let valid = nValid || qValid || aValid;
+    return (valid);
   }
 
-  while(isQuestionValid(randomQuestionNumber) || isQuizProtected()) {
+  while (isQuestionInvalid(randomQuestionNumber) || isQuizDisrupted()) {
     randomQuestionNumber = Math.floor(Math.random() * (max - min + 1) +
-    min);
+      min);
   }
 
   randomNumberArray.push(randomQuestionNumber);
@@ -131,21 +138,21 @@ document.getElementById('answerForm').onsubmit = function(e) {
 
 // Checking the Answer
 /*
-We check the users answer using the string-similarity api.
-the string similarity finds the degree of similarity between two strings, based on Dice's Coefficient.
-It Returns a fraction between 0 and 1 which indicates the degree of similarity between the two strings
-We accept the answer as long as it is at least 60% accurate.
-In this function we also ensure the strings passed to the api are lowercase.
+Uses the string-similarity API to check the answer.
+API Returns a fraction between 0 and 1 which indicates the similarity.
+Answers are accepted as long as they are at least 60% accurate.
+This function also ensures the strings passed to the api is lowercase.
+CSS adjusted to change the UI and present users results.
 */
 function checkAnswer() {
   const title = categoryData.title;
 
-  let ans = document.getElementById("answer").innerHTML;
-  let userAns = document.getElementById("userAnswer").value;
+  let ans = document.getElementById("answer").innerHTML,
+    userAns = document.getElementById("userAnswer").value;
 
-  let ansLower = ans.toLowerCase();
-  let userAnsLower = userAns.toLowerCase();
-  
+  let ansLower = ans.toLowerCase(),
+    userAnsLower = userAns.toLowerCase();
+
   if (stringSimilarity.compareTwoStrings(ansLower, userAnsLower) >= 0.6) {
     score++;
     document.getElementById("hostSpeech").innerHTML =
@@ -167,20 +174,20 @@ function checkAnswer() {
     popUp.style.display = 'inline-block';
     popUp.querySelector('.popUpCategory').innerHTML = 'You chose the ' + title +
       ' category';
-      
-      if (score == 1) {
-          popUp.querySelector('.popUpScore').innerHTML = 'You got ' + score +
-              ' question correct!';
-      } else {
-          popUp.querySelector('.popUpScore').innerHTML = 'You got ' + score +
-              ' questions correct!';
-      }
+
+    if (score == 1) {
+      popUp.querySelector('.popUpScore').innerHTML = 'You got ' + score +
+        ' question correct!';
+    } else {
+      popUp.querySelector('.popUpScore').innerHTML = 'You got ' + score +
+        ' questions correct!';
+    }
 
     quizHost.style.backgroundImage =
       'url("assets/images/quizHost/alien_sad1.png")';
   }
   document.getElementById("answerForm")
-.reset(); //reset the form for next question
+    .reset(); //reset the form for next question
 }
 
 
@@ -192,26 +199,3 @@ function reloadGame() {
 let restartGame = function restartGame() {
   reloadGame();
 };
-
-
-//Store Code Temp
-/*
-
-await fetch('https://jservice.io/api/category?id=' + cat)
-    .then(
-      function(response) {
-        if (!response.ok) {
-          alert('Oh no! Looks like there was an error.');
-          return;
-        }
-
-        response.json().then(function(data) {
-          categoryData = data;
-        });
-      }
-    )
-    .catch(function(err) {
-      alert('Oh dear! Seems we had a problem finding the category.', err);
-    });
-
-*/

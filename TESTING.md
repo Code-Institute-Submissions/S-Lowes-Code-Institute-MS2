@@ -5,6 +5,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate pa
 #### Validators
 -   [W3C Markup Validator](https://validator.w3.org/) - [Results](documentation/images/html_valid.png)
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](documentation/images/css_valid.png)
+-   [JSHint](https://jshint.com/) - [Results](documentation/images/js_valid.png)
 
 #### Formatters
 

@@ -2,7 +2,7 @@
 
 This is a trivia website using the jService API and string-similarity API Designed to be eye-catching, interactive & fun.
 
-![Multi-Device MockUp](documentation/images/multidevicedisplay.png)
+![Multi-Device MockUp](documentation/images/multi_device_display.png)
 
 ## User Experience
 

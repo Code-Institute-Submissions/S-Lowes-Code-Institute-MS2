@@ -1,82 +1,80 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extra Trivia</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/ea9185fe23.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
-  </head>
-  <body>
-    <header>
-      <div>
-        <nav class="navBar">
-          <a class="headerTriviaHost" href="index.html"></a>
-          <h1>Extra Trivia</h1>
-          <a class="footerGitLink" href="https://github.com/S-Lowes/Code-Institute-MS2" target="_blank"><i class="fab fa-github-square"></i></a>
-        </nav>
-      </div>
-    </header>
-    <section>
-      <h2 class="sr-only">The Quiz</h2>
-      <div class="quiz">
-        <div class="quizBackground">
-          <div class="quizHost">
-            <!--Quiz host image used as a background for div-->
-            <div class="bubble-wrap">
-              <div class="bubble left" id="hostSpeech">
-                Hello, human surveillance bot. To begin a test, please choose a category.<br>
-                <br>If you wish to restart for any reason, click my confused friend at the top of the page.
-              </div>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Extra Trivia</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      <script src="https://kit.fontawesome.com/ea9185fe23.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
+   </head>
+   <body>
+      <header>
+         <div>
+            <nav class="navBar">
+               <a class="headerTriviaHost" href="index.html"></a>
+               <h1>Extra Trivia</h1>
+               <a class="footerGitLink" href="https://github.com/S-Lowes/Code-Institute-MS2" target="_blank"><i class="fab fa-github-square"></i></a>
+            </nav>
+         </div>
+      </header>
+      <section>
+         <h2 class="sr-only">The Quiz</h2>
+         <div class="quiz">
+            <div class="quizBackground">
+               <div class="quizHost">
+                  <!--Quiz host image used as a background for div-->
+                  <div class="bubble-wrap">
+                     <div class="bubble left" id="hostSpeech">
+                        Hello, human surveillance bot. To begin a test, please choose a category.<br>
+                        <br>If you wish to restart for any reason, click my confused friend at the top of the page.
+                     </div>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
-        <div class="quizContent">
-          <!-- Choose a Category -->
-          <div class="categoryChoice">
-            <button id="21" class="quizButtons" onclick="fetchCategory(this)">Animals</button> <!-- 21: http://jservice.io/api/category?id=21 -->
-            <button id="114" class="quizButtons" onclick="fetchCategory(this)">History</button> <!-- 114: http://jservice.io/api/category?id=114 -->
-            <button id="680" class="quizButtons" onclick="fetchCategory(this)">Mythology</button> <!-- 680: http://jservice.io/api/category?id=680 -->
-            <button id="25" class="quizButtons" onclick="fetchCategory(this)">Science</button> <!-- 25: http://jservice.io/api/category?id=21 -->
-            <button id="42" class="quizButtons" onclick="fetchCategory(this)">Sports</button> <!-- 42: http://jservice.io/api/category?id=42 -->
-            <button id="227" class="quizButtons" onclick="fetchCategory(this)">Hodgepodge</button> <!-- 227: http://jservice.io/api/category?id=227 -->
-          </div>
-          <!-- The Question & Answer + startQuiz/NextQuestion button-->
-          <button id="startQuiz" class="quizButtons">Start Quiz</button>
-          <div id="question"></div>
-          <div id="answer"></div>
-          <!-- User Answer Submission -->
-          <div class="userAnswerSubmission">
-            <form id="answerForm">
-              <!--credit Scott for help with js bug-->
-              <label for="userAnswer">Write Your answer Here: </label>
-              <input type="text" id="userAnswer" name="userAnswer" autocomplete="off" required>
-              <input id="submitButton" class="quizButtons" type="submit" value="Submit" onsubmit="checkAnswer();">
-            </form>
-          </div>
-          <!-- The popUp results -->
-          <div class="popUp">
-            <div class="popUpText">Congratulations!</div>
-            <div class="popUpCategory">You chose the x category</div>
-            <div class="popUpScore">You got x questions correct!</div>
-            <div class="popUpSocials">Get in touch:</div>
-            <a class="socials" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-            <a class="socials" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a>
-            <a class="socials" href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-            <button id="replayButton" class="quizButtons" type="button" onclick="restartGame()">Play Again!</button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <!--No footer?-->
-    </footer>
-    <!--Scripts-->
-    <script src="assets/js/quiz.js"></script>
-    <script src="//unpkg.com/string-similarity/umd/string-similarity.min.js"></script> <!--https://www.npmjs.com/package/string-similarity#comparetwostringsstring1-string2-->
-  </body>
+            <div class="quizContent">
+               <!-- Choose a Category -->
+               <div class="categoryChoice">
+                  <button id="21" class="quizButtons" onclick="fetchCategory(this)">Animals</button> <!-- 21: http://jservice.io/api/category?id=21 -->
+                  <button id="114" class="quizButtons" onclick="fetchCategory(this)">History</button> <!-- 114: http://jservice.io/api/category?id=114 -->
+                  <button id="680" class="quizButtons" onclick="fetchCategory(this)">Mythology</button> <!-- 680: http://jservice.io/api/category?id=680 -->
+                  <button id="25" class="quizButtons" onclick="fetchCategory(this)">Science</button> <!-- 25: http://jservice.io/api/category?id=21 -->
+                  <button id="42" class="quizButtons" onclick="fetchCategory(this)">Sports</button> <!-- 42: http://jservice.io/api/category?id=42 -->
+                  <button id="227" class="quizButtons" onclick="fetchCategory(this)">Hodgepodge</button> <!-- 227: http://jservice.io/api/category?id=227 -->
+               </div>
+               <!-- The Question & Answer + startQuiz/NextQuestion button-->
+               <button id="startQuiz" class="quizButtons">Start Quiz</button>
+               <div id="question"></div>
+               <div id="answer"></div>
+               <!-- User Answer Submission -->
+               <div class="userAnswerSubmission">
+                  <form id="answerForm">
+                     <!--credit Scott for help with js bug-->
+                     <label for="userAnswer">Write Your answer Here: </label>
+                     <input type="text" id="userAnswer" name="userAnswer" autocomplete="off" required>
+                     <input id="submitButton" class="quizButtons" type="submit" value="Submit" onsubmit="checkAnswer();">
+                  </form>
+               </div>
+               <!-- The popUp results -->
+               <div class="popUp">
+                  <div class="popUpText">Congratulations!</div>
+                  <div class="popUpCategory">You chose the x category</div>
+                  <div class="popUpScore">You got x questions correct!</div>
+                  <div class="popUpSocials">Get in touch:</div>
+                  <a class="socials" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                  <a class="socials" href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a>
+                  <a class="socials" href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                  <button id="replayButton" class="quizButtons" type="button" onclick="restartGame()">Play Again!</button>
+               </div>
+            </div>
+         </div>
+      </section>
+      <footer>
+         <!--No footer?-->
+      </footer>
+      <!--Scripts-->
+      <script src="assets/js/quiz.js"></script>
+      <script src="//unpkg.com/string-similarity/umd/string-similarity.min.js"></script>
+   </body>
 </html>
