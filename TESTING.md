@@ -7,6 +7,12 @@ The W3C Markup Validator, W3C CSS Validator and JSHint Services were used to val
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - [Results](documentation/images/css_valid.png)
 -   [JSHint](https://jshint.com/) - [Results](documentation/images/js_valid.png)
 
+Regarding the Javascript validation: 
+1. Two unused variables are acknowledged. However, they are activated by the HTML as onclick events.
+1. Two undefined variables are acknowledged.
+    - One is the [alert](https://www.w3schools.com/jsref/met_win_alert.asp) method.
+    - The other is a method from [StringSimilarity](https://www.npmjs.com/package/string-similarity#for-nodejs) API.
+
 #### Formatters
 
 - [HTML Formatter](https://www.freeformatter.com/html-formatter.html)
@@ -100,6 +106,7 @@ The W3C Markup Validator, W3C CSS Validator and JSHint Services were used to val
     - Speech bubble padding is further reduced to allow for large questions.
     - Buttons stack so they can fit onto the screen.
     - Form submission button also stacks.
+
 ## Different Browser Tests
 
 ### [Mozilla Firefox](https://www.mozilla.org/en-GB/firefox/new/)
@@ -118,9 +125,9 @@ The quiz works as expected and UI appears as designed.
 
 The quiz works as expected and UI appears as designed.
 
-## Bugs Fixed During Development
+## Bugs Fixes During Development
 
-**Bug**: The 'required' attribute to HTML form did not seem to be working.
+**Bug**: The 'required' attribute applied to HTML form did not seem to be working.
 
 **Bugfix**: Changing 'onclick' attribute to 'onsubmit' fixed the issue.
 
@@ -139,3 +146,7 @@ The quiz works as expected and UI appears as designed.
 **Bug**: If the user was very fast they could cause errors in the console by choosing a category and quickly pressing the start quiz button.
 
 **Bugfix**: This was because the implementation of 'async' 'await' in Javascript was incorrect. So the 'fetchCategory' function did not correctly wait for the data to be fetched before continuing with its final tasks. This was fixed by rewriting the code and implementing it correctly.
+
+## Further Testing:
+
+Friends and family members have played the quiz multiple times and reviewed documentation to point out any bugs and/or user experience issues.
